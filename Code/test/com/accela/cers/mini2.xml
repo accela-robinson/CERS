@@ -1,0 +1,897 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cers:RegulatorFacilitySubmittals xsi:schemaLocation="http://cersservices.calepa.ca.gov/Schemas/RegulatorFacilitySubmittalQuery/1/04/ http://cersservices.calepa.ca.gov/Schemas/1/04/RegulatorFacilitySubmittalQuery.xsd" xmlns:cers="http://cersservices.calepa.ca.gov/Schemas/RegulatorFacilitySubmittalQuery/1/04/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DataSetDateTime>2012-11-27T11:15:48Z</DataSetDateTime>
+  <TransactionKey>a1eefd9c-ae5f-4bf4-8183-21759b081e09</TransactionKey>
+  <TransactionStatus>Accepted</TransactionStatus>
+  <FacilitySubmittal>
+    <CERSID>10055566</CERSID>
+    <CERSOrganization>
+      <OrganizationCode>90070306</OrganizationCode>
+      <OrganizationName><![CDATA[TTM TECHNOLOGY - SAN DIEGO DIVISION]]></OrganizationName>
+    </CERSOrganization>
+    <FacilityID>37-000-207495</FacilityID>
+    <FacilityRegulatorKey />
+    <FacilityInformation>
+      <SubmittalElementHeader>
+        <SubmittedOn>2012-10-30T18:58:52Z</SubmittedOn>
+        <SubmittedByFirstName><![CDATA[Stacey]]></SubmittedByFirstName>
+        <SubmittedByLastName><![CDATA[Gebeau]]></SubmittedByLastName>
+        <SubmittedByEmail><![CDATA[stacey.gebeau@ttmtech.com]]></SubmittedByEmail>
+        <RegulatorCode>3700</RegulatorCode>
+        <SubmittalStatus>5</SubmittalStatus>
+        <SubmittalActionDetails>
+          <SubmittalActionOn>2012-11-05T19:02:03Z</SubmittalActionOn>
+          <SubmittalActionAgentName><![CDATA[Keith Waara]]></SubmittalActionAgentName>
+          <SubmittalActionAgentEmail><![CDATA[keith.waara@sdcounty.ca.gov]]></SubmittalActionAgentEmail>
+          <SubmittalActionComments><![CDATA[Hi Stacy, 
+
+I noticed a few things that should be corrected or added:  
+
+1. On the Business Activies page you checked No under the Excluded/Exempted section.  I thought you did some recycling under 25143.2? Please correct me if I'm wrong.
+2. On the Business Owner/Operator page please add a secondary Emergency Contact. 
+3. On the Business Owner/Operator page please add the certification information in that section
+
+Thanks, 
+Keith  ]]></SubmittalActionComments>
+        </SubmittalActionDetails>
+        <CERSUniqueKey>ef38dd12-0448-4c6a-9647-54ee6e472249</CERSUniqueKey>
+      </SubmittalElementHeader>
+      <BusinessActivities>
+        <BusinessName><![CDATA[TTM TECHNOLOGY - SAN DIEGO DIVISION]]></BusinessName>
+        <SiteAddress><![CDATA[5037 Ruffner St]]></SiteAddress>
+        <City><![CDATA[San Diego]]></City>
+        <ZipCode>92111</ZipCode>
+        <EPAID>CAD020513412</EPAID>
+        <HMOnSite>Y</HMOnSite>
+        <CalARPRegulatedSubstances>Y</CalARPRegulatedSubstances>
+        <OwnOrOperateUST>N</OwnOrOperateUST>
+        <OwnOrOperateAPST>N</OwnOrOperateAPST>
+        <HWGenerator>Y</HWGenerator>
+        <Recycle>N</Recycle>
+        <OnsiteHWTreatment>N</OnsiteHWTreatment>
+        <FinancialAssurance>Y</FinancialAssurance>
+        <RWConsolidationSite>N</RWConsolidationSite>
+        <HWTankClosure>Y</HWTankClosure>
+        <RCRALargeQuantityGenerator>Y</RCRALargeQuantityGenerator>
+        <HHWCollection>N</HHWCollection>
+        <CERSUniqueKey>00000000-0000-0000-0000-000000000000</CERSUniqueKey>
+      </BusinessActivities>
+      <OwnerOperatorInformation>
+        <Phone>858-874-2701</Phone>
+        <Fax>858-277-9105</Fax>
+        <SICCode>3672</SICCode>
+        <NAICSCode>334412</NAICSCode>
+        <MailingAddress><![CDATA[5037 Ruffner Street]]></MailingAddress>
+        <MailingAddressCity><![CDATA[San Diego]]></MailingAddressCity>
+        <MailingAddressState>CA</MailingAddressState>
+        <MailingAddressZipCode>92111</MailingAddressZipCode>
+        <OperatorName><![CDATA[TTM PRINTED CIRCUIT GROUP, INC]]></OperatorName>
+        <OperatorPhone>858-874-2752</OperatorPhone>
+        <OwnerName><![CDATA[TTM PRINTED CIRCUIT GROUP, INC]]></OwnerName>
+        <OwnerPhone>714-241-0303</OwnerPhone>
+        <OwnerMailAddress><![CDATA[2630 South Harbor Blvd]]></OwnerMailAddress>
+        <OwnerCity><![CDATA[Santa Ana]]></OwnerCity>
+        <OwnerState>CA</OwnerState>
+        <OwnerZipCode>92704</OwnerZipCode>
+        <OwnerCountry>United States</OwnerCountry>
+        <EContactName><![CDATA[Stacey Gebeau]]></EContactName>
+        <EContactPhone>858-874-2752</EContactPhone>
+        <EContactMailingAddress><![CDATA[5037 Ruffner St]]></EContactMailingAddress>
+        <EContactEmailAddress><![CDATA[stacey.gebeau@ttmtech.com]]></EContactEmailAddress>
+        <EContactCity><![CDATA[San Diego]]></EContactCity>
+        <EContactState>CA</EContactState>
+        <EContactZipCode>92111</EContactZipCode>
+        <EContactCountry>United States</EContactCountry>
+        <PECName><![CDATA[Stacey Gebeau]]></PECName>
+        <PECTitle><![CDATA[Environmental Health & Safety Manager]]></PECTitle>
+        <PECBusinessPhone>858-874-2752</PECBusinessPhone>
+        <PEC24HrPhone>860-221-5925</PEC24HrPhone>
+        <BillingContactName><![CDATA[Damon Soto]]></BillingContactName>
+        <BillingContactPhone>858-874-2760</BillingContactPhone>
+        <BillingAddress><![CDATA[5037 Ruffner Street]]></BillingAddress>
+        <BillingAddressCity><![CDATA[San Diego]]></BillingAddressCity>
+        <BillingAddressState>CA</BillingAddressState>
+        <BillingAddressZipCode>92111</BillingAddressZipCode>
+        <BillingAddressCountry>United States</BillingAddressCountry>
+        <NumberOfEmployees>0</NumberOfEmployees>
+        <CERSUniqueKey>00000000-0000-0000-0000-000000000000</CERSUniqueKey>
+      </OwnerOperatorInformation>
+      <GeographicInformation>
+        <CERSPoint>
+          <LatitudeMeasure>32.8334880</LatitudeMeasure>
+          <LongitudeMeasure>-117.1590700</LongitudeMeasure>
+          <HorizontalAccuracyMeasure>100.0000</HorizontalAccuracyMeasure>
+          <HorizontalCollectionMethod>104</HorizontalCollectionMethod>
+          <GeographicReferencePoint>103</GeographicReferencePoint>
+          <HorizontalReferenceDatum />
+          <DataCollectionDate>2010-07-02</DataCollectionDate>
+        </CERSPoint>
+      </GeographicInformation>
+    </FacilityInformation>
+  </FacilitySubmittal>
+  <FacilitySubmittal>
+    <CERSID>10175963</CERSID>
+    <CERSOrganization>
+      <OrganizationCode>90129589</OrganizationCode>
+      <OrganizationName><![CDATA[Dollar Tree Stores, Inc.]]></OrganizationName>
+    </CERSOrganization>
+    <FacilityID />
+    <FacilityRegulatorKey />
+    <FacilityInformation>
+      <SubmittalElementHeader>
+        <SubmittedOn>2012-10-17T15:08:39Z</SubmittedOn>
+        <SubmittedByFirstName><![CDATA[Amy]]></SubmittedByFirstName>
+        <SubmittedByLastName><![CDATA[Smalls]]></SubmittedByLastName>
+        <SubmittedByEmail><![CDATA[asmalls@dollartree.com]]></SubmittedByEmail>
+        <RegulatorCode>3700</RegulatorCode>
+        <SubmittalStatus>5</SubmittalStatus>
+        <SubmittalActionDetails>
+          <SubmittalActionOn>2012-10-17T23:41:31Z</SubmittalActionOn>
+          <SubmittalActionAgentName><![CDATA[Michelle Price]]></SubmittalActionAgentName>
+          <SubmittalActionAgentEmail><![CDATA[michelle.price@sdcounty.ca.gov]]></SubmittalActionAgentEmail>
+          <SubmittalActionComments><![CDATA[Please contact Kelly Robertson at 619-778-2167 or via email at kelly.robertson@sdcounty.ca.gov. Thank you, Michelle Price]]></SubmittalActionComments>
+        </SubmittalActionDetails>
+        <CERSUniqueKey>bfbc5488-9b8f-40bc-8ce2-343734a0ab99</CERSUniqueKey>
+      </SubmittalElementHeader>
+      <BusinessActivities>
+        <BusinessName><![CDATA[Dollar Tree #04162]]></BusinessName>
+        <SiteAddress><![CDATA[218 N El Camino Real]]></SiteAddress>
+        <City><![CDATA[Encinitas]]></City>
+        <ZipCode>92024</ZipCode>
+        <EPAID>CAL000378436</EPAID>
+        <HMOnSite>Y</HMOnSite>
+        <CalARPRegulatedSubstances>N</CalARPRegulatedSubstances>
+        <OwnOrOperateUST>N</OwnOrOperateUST>
+        <OwnOrOperateAPST>N</OwnOrOperateAPST>
+        <HWGenerator>Y</HWGenerator>
+        <Recycle>N</Recycle>
+        <OnsiteHWTreatment>N</OnsiteHWTreatment>
+        <FinancialAssurance>N</FinancialAssurance>
+        <RWConsolidationSite>N</RWConsolidationSite>
+        <HWTankClosure>N</HWTankClosure>
+        <RCRALargeQuantityGenerator>N</RCRALargeQuantityGenerator>
+        <HHWCollection>N</HHWCollection>
+        <CERSUniqueKey>02a8f975-da1e-409f-9106-69634a797f8f</CERSUniqueKey>
+      </BusinessActivities>
+      <OwnerOperatorInformation>
+        <BeginningDate>2012-10-12</BeginningDate>
+        <EndingDate>2013-10-11</EndingDate>
+        <Phone>706-632-1569</Phone>
+        <Fax>757-321-5839</Fax>
+        <DunAndBradstreet>188955553</DunAndBradstreet>
+        <SICCode>5331</SICCode>
+        <NAICSCode>452990</NAICSCode>
+        <MailingAddress><![CDATA[500 Volvo Parkway]]></MailingAddress>
+        <MailingAddressCity><![CDATA[Chesapeake]]></MailingAddressCity>
+        <MailingAddressState>VA</MailingAddressState>
+        <MailingAddressZipCode>23320</MailingAddressZipCode>
+        <OperatorName><![CDATA[Dollar Tree #04162]]></OperatorName>
+        <OperatorPhone>706-632-1569</OperatorPhone>
+        <OwnerName><![CDATA[Dollar Tree Stores, Inc.]]></OwnerName>
+        <OwnerPhone>757-321-5000</OwnerPhone>
+        <OwnerMailAddress><![CDATA[500 Volvo Parkway]]></OwnerMailAddress>
+        <OwnerCity><![CDATA[Chesapeake]]></OwnerCity>
+        <OwnerState>VA</OwnerState>
+        <OwnerZipCode>23320</OwnerZipCode>
+        <OwnerCountry>United States</OwnerCountry>
+        <EContactName><![CDATA[Bruce Walters]]></EContactName>
+        <EContactPhone>757-321-5000</EContactPhone>
+        <EContactMailingAddress><![CDATA[500 Volvo Parkway]]></EContactMailingAddress>
+        <EContactEmailAddress><![CDATA[bawalters@dollartree.com]]></EContactEmailAddress>
+        <EContactCity><![CDATA[Chesapeake]]></EContactCity>
+        <EContactState>VA</EContactState>
+        <EContactZipCode>23320</EContactZipCode>
+        <EContactCountry>United States</EContactCountry>
+        <PECName><![CDATA[3E Company]]></PECName>
+        <PECTitle><![CDATA[Chemical Company]]></PECTitle>
+        <PECBusinessPhone>800-451-8346</PECBusinessPhone>
+        <PEC24HrPhone>800-451-8346</PEC24HrPhone>
+        <SECName><![CDATA[StrongPak]]></SECName>
+        <SECBusinessPhone>770-409-1500</SECBusinessPhone>
+        <SEC24HrPhone>770-409-1500</SEC24HrPhone>
+        <IdentificationSignedDate>2012-10-12</IdentificationSignedDate>
+        <DocumentPreparerName><![CDATA[Amy Smalls]]></DocumentPreparerName>
+        <IdentificationSignerName><![CDATA[Amy Smalls]]></IdentificationSignerName>
+        <IdentificationSignerTitle><![CDATA[New Store Setup Coordinator]]></IdentificationSignerTitle>
+        <BillingContactName><![CDATA[Amy Smalls]]></BillingContactName>
+        <BillingContactPhone>757-321-5369</BillingContactPhone>
+        <BillingContactEmail><![CDATA[asmalls@dollartree.com]]></BillingContactEmail>
+        <BillingAddress><![CDATA[500 Volvo Parkway]]></BillingAddress>
+        <BillingAddressCity><![CDATA[Chesapeake]]></BillingAddressCity>
+        <BillingAddressState>VA</BillingAddressState>
+        <BillingAddressZipCode>23320</BillingAddressZipCode>
+        <BillingAddressCountry>United States</BillingAddressCountry>
+        <CERSUniqueKey>a5392b73-865e-4dd9-b706-9bfb9e3888d7</CERSUniqueKey>
+      </OwnerOperatorInformation>
+    </FacilityInformation>
+    <HazardousMaterialsInventory>
+      <SubmittalElementHeader>
+        <SubmittedOn>2012-10-17T15:08:39Z</SubmittedOn>
+        <SubmittedByFirstName><![CDATA[Amy]]></SubmittedByFirstName>
+        <SubmittedByLastName><![CDATA[Smalls]]></SubmittedByLastName>
+        <SubmittedByEmail><![CDATA[asmalls@dollartree.com]]></SubmittedByEmail>
+        <RegulatorCode>3700</RegulatorCode>
+        <SubmittalStatus>5</SubmittalStatus>
+        <SubmittalActionDetails>
+          <SubmittalActionOn>2012-10-17T23:41:43Z</SubmittalActionOn>
+          <SubmittalActionAgentName><![CDATA[Michelle Price]]></SubmittalActionAgentName>
+          <SubmittalActionAgentEmail><![CDATA[michelle.price@sdcounty.ca.gov]]></SubmittalActionAgentEmail>
+          <SubmittalActionComments><![CDATA[Please contact Kelly Robertson at 619-778-2167 or via email at kelly.robertson@sdcounty.ca.gov]]></SubmittalActionComments>
+        </SubmittalActionDetails>
+        <CERSUniqueKey>8ed1cfdd-a846-409a-b6f1-1b466d13676a</CERSUniqueKey>
+      </SubmittalElementHeader>
+      <Chemicals>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Stock room and sales floor]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Flammable Solids]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Charcoal, Moth Balls, Sulfur]]></CommonName>
+          <EHS>N</EHS>
+          <CASNumber>7704-34-9</CASNumber>
+          <HMType>c</HMType>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>a</PhysicalState>
+          <LargestContainer>1</LargestContainer>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>N</FHCReactive>
+          <FHCPressureRelease>N</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>1</AverageDailyAmount>
+          <MaximumDailyAmount>1</MaximumDailyAmount>
+          <AnnualWasteAmount>150</AnnualWasteAmount>
+          <StateWasteCode>141</StateWasteCode>
+          <Units>c</Units>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>N</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>Y</SCBox>
+          <SCCylinder>N</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>N</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[N]]></SCOther>
+          <StoragePressure>a</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <DOTHazardClassificationID>4.1</DOTHazardClassificationID>
+          <CERSUniqueKey>500f49ef-fb08-4d93-8621-12d7a4d56f8e</CERSUniqueKey>
+        </Chemical>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Stock room and sales floor]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Oxidizers]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Peroxide, Laundry Bleach, Hair Bleach Products]]></CommonName>
+          <EHS>N</EHS>
+          <CASNumber>75-91-2</CASNumber>
+          <HMType>c</HMType>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>b</PhysicalState>
+          <LargestContainer>1</LargestContainer>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>Y</FHCReactive>
+          <FHCPressureRelease>N</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>1</AverageDailyAmount>
+          <MaximumDailyAmount>1</MaximumDailyAmount>
+          <AnnualWasteAmount>150</AnnualWasteAmount>
+          <StateWasteCode>131</StateWasteCode>
+          <Units>c</Units>
+          <DaysOnSite>180</DaysOnSite>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>N</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>N</SCBox>
+          <SCCylinder>N</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>Y</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[N]]></SCOther>
+          <StoragePressure>a</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <DOTHazardClassificationID>5.1</DOTHazardClassificationID>
+          <CERSUniqueKey>9269cc4c-45fa-485f-86a5-32d54ad865d8</CERSUniqueKey>
+        </Chemical>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Stock room and sales floor]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Toxic Liquids]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Medicines, Antifreeze, Insect Repellents]]></CommonName>
+          <EHS>N</EHS>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>a</PhysicalState>
+          <LargestContainer>1</LargestContainer>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>N</FHCReactive>
+          <FHCPressureRelease>N</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>1</AverageDailyAmount>
+          <MaximumDailyAmount>1</MaximumDailyAmount>
+          <AnnualWasteAmount>150</AnnualWasteAmount>
+          <StateWasteCode>311</StateWasteCode>
+          <Units>c</Units>
+          <DaysOnSite>180</DaysOnSite>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>N</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>N</SCBox>
+          <SCCylinder>N</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>Y</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[N]]></SCOther>
+          <StoragePressure>a</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <HC1PercentByWeight>50.00</HC1PercentByWeight>
+          <HC1Name><![CDATA[Pyrethins]]></HC1Name>
+          <HC1EHS>N</HC1EHS>
+          <HC2PercentByWeight>20.00</HC2PercentByWeight>
+          <HC2Name><![CDATA[Carbaryl]]></HC2Name>
+          <HC2EHS>N</HC2EHS>
+          <HC2CAS>63-25-2</HC2CAS>
+          <HC3PercentByWeight>15.00</HC3PercentByWeight>
+          <HC3Name><![CDATA[Copper Sulfate & Lime]]></HC3Name>
+          <HC3EHS>N</HC3EHS>
+          <HC3CAS>7758-98-7</HC3CAS>
+          <HC4PercentByWeight>10.00</HC4PercentByWeight>
+          <HC4Name><![CDATA[Citronella]]></HC4Name>
+          <HC4EHS>N</HC4EHS>
+          <HC5PercentByWeight>5.00</HC5PercentByWeight>
+          <HC5Name><![CDATA[Deet]]></HC5Name>
+          <HC5EHS>N</HC5EHS>
+          <HC5CAS>134-62-3</HC5CAS>
+          <DOTHazardClassificationID>6.1</DOTHazardClassificationID>
+          <CERSUniqueKey>8dc5ddf8-1639-4cc1-8ea8-4f23daf0b8da</CERSUniqueKey>
+        </Chemical>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Stock room and sales floor]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Toxic Solids]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Medicines]]></CommonName>
+          <EHS>N</EHS>
+          <HMType>c</HMType>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>a</PhysicalState>
+          <LargestContainer>1</LargestContainer>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>N</FHCReactive>
+          <FHCPressureRelease>N</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>1</AverageDailyAmount>
+          <MaximumDailyAmount>1</MaximumDailyAmount>
+          <AnnualWasteAmount>150</AnnualWasteAmount>
+          <StateWasteCode>311</StateWasteCode>
+          <Units>c</Units>
+          <DaysOnSite>180</DaysOnSite>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>N</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>N</SCBox>
+          <SCCylinder>N</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>Y</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[N]]></SCOther>
+          <StoragePressure>a</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <HC1PercentByWeight>50.00</HC1PercentByWeight>
+          <HC1Name><![CDATA[Pyrethins]]></HC1Name>
+          <HC1EHS>N</HC1EHS>
+          <HC2PercentByWeight>20.00</HC2PercentByWeight>
+          <HC2Name><![CDATA[Carbaryl]]></HC2Name>
+          <HC2EHS>N</HC2EHS>
+          <HC2CAS>63-25-2</HC2CAS>
+          <HC3PercentByWeight>15.00</HC3PercentByWeight>
+          <HC3Name><![CDATA[Copper Sulfate & Lime]]></HC3Name>
+          <HC3EHS>N</HC3EHS>
+          <HC3CAS>7758-98-7</HC3CAS>
+          <HC4PercentByWeight>10.00</HC4PercentByWeight>
+          <HC4Name><![CDATA[Citronella]]></HC4Name>
+          <HC4EHS>N</HC4EHS>
+          <HC5PercentByWeight>5.00</HC5PercentByWeight>
+          <HC5Name><![CDATA[Deet]]></HC5Name>
+          <HC5EHS>N</HC5EHS>
+          <HC5CAS>134-62-3</HC5CAS>
+          <DOTHazardClassificationID>6.1</DOTHazardClassificationID>
+          <CERSUniqueKey>c848104c-1eb8-437d-9e35-7e994f2d12f9</CERSUniqueKey>
+        </Chemical>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Balloon Station and Stock room]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Helium]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Helium]]></CommonName>
+          <EHS>N</EHS>
+          <CASNumber>7440-59-7</CASNumber>
+          <HMType>a</HMType>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>c</PhysicalState>
+          <LargestContainer>240</LargestContainer>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>N</FHCReactive>
+          <FHCPressureRelease>Y</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>720</AverageDailyAmount>
+          <MaximumDailyAmount>2880</MaximumDailyAmount>
+          <AnnualWasteAmount>0</AnnualWasteAmount>
+          <Units>b</Units>
+          <DaysOnSite>365</DaysOnSite>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>N</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>N</SCBox>
+          <SCCylinder>Y</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>N</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[N]]></SCOther>
+          <StoragePressure>b</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <DOTHazardClassificationID>2.2</DOTHazardClassificationID>
+          <CERSUniqueKey>027c3f51-2a17-41e6-b7bd-0c699b3b7513</CERSUniqueKey>
+        </Chemical>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Stock room and sales floor]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Aerosols]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Cleaning Supplies, Air Fresheners]]></CommonName>
+          <EHS>N</EHS>
+          <CASNumber>101-68-8</CASNumber>
+          <HMType>c</HMType>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>c</PhysicalState>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>N</FHCReactive>
+          <FHCPressureRelease>Y</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>1</AverageDailyAmount>
+          <MaximumDailyAmount>1</MaximumDailyAmount>
+          <AnnualWasteAmount>150</AnnualWasteAmount>
+          <StateWasteCode>214</StateWasteCode>
+          <Units>c</Units>
+          <DaysOnSite>180</DaysOnSite>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>Y</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>N</SCBox>
+          <SCCylinder>N</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>N</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[N]]></SCOther>
+          <StoragePressure>a</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <DOTHazardClassificationID>2.1</DOTHazardClassificationID>
+          <CERSUniqueKey>f0223680-a20d-4cdf-b4f0-2e2448a5e5d8</CERSUniqueKey>
+        </Chemical>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Stock room and sales floor]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Corrosive Acids]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Metal Cleaners, Soap Scum Removers, Dishwasher Detergent]]></CommonName>
+          <EHS>N</EHS>
+          <HMType>c</HMType>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>a</PhysicalState>
+          <LargestContainer>1</LargestContainer>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>N</FHCReactive>
+          <FHCPressureRelease>N</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>1</AverageDailyAmount>
+          <MaximumDailyAmount>1</MaximumDailyAmount>
+          <AnnualWasteAmount>150</AnnualWasteAmount>
+          <StateWasteCode>791</StateWasteCode>
+          <Units>c</Units>
+          <DaysOnSite>180</DaysOnSite>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>N</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>N</SCBox>
+          <SCCylinder>N</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>Y</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[N]]></SCOther>
+          <StoragePressure>a</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <HC1PercentByWeight>20.00</HC1PercentByWeight>
+          <HC1Name><![CDATA[Oxalic Acid]]></HC1Name>
+          <HC1EHS>N</HC1EHS>
+          <HC1CAS>144-62-7</HC1CAS>
+          <HC2PercentByWeight>20.00</HC2PercentByWeight>
+          <HC2Name><![CDATA[Hydrofluoric Acid]]></HC2Name>
+          <HC2EHS>N</HC2EHS>
+          <HC2CAS>7664-39-3</HC2CAS>
+          <HC3PercentByWeight>20.00</HC3PercentByWeight>
+          <HC3Name><![CDATA[Sulfuric Acid]]></HC3Name>
+          <HC3EHS>N</HC3EHS>
+          <HC3CAS>7664-93-9</HC3CAS>
+          <HC4PercentByWeight>20.00</HC4PercentByWeight>
+          <HC4Name><![CDATA[Salicylic Acid]]></HC4Name>
+          <HC4EHS>N</HC4EHS>
+          <HC4CAS>69-72-7</HC4CAS>
+          <HC5PercentByWeight>20.00</HC5PercentByWeight>
+          <HC5Name><![CDATA[Acetic Acid]]></HC5Name>
+          <HC5EHS>N</HC5EHS>
+          <HC5CAS>64-19-7</HC5CAS>
+          <DOTHazardClassificationID>8</DOTHazardClassificationID>
+          <CERSUniqueKey>5973aa03-0d4f-48c6-a29c-9f5b19526f3f</CERSUniqueKey>
+        </Chemical>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Stock room and sales floor]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Corrosive Bases (Basics)]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Drain & Kitchen Cleaners, Liquid Dishwasher Detergents]]></CommonName>
+          <EHS>N</EHS>
+          <HMType>c</HMType>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>b</PhysicalState>
+          <LargestContainer>1</LargestContainer>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>Y</FHCReactive>
+          <FHCPressureRelease>N</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>1</AverageDailyAmount>
+          <MaximumDailyAmount>1</MaximumDailyAmount>
+          <AnnualWasteAmount>150</AnnualWasteAmount>
+          <StateWasteCode>122</StateWasteCode>
+          <Units>c</Units>
+          <DaysOnSite>180</DaysOnSite>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>N</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>N</SCBox>
+          <SCCylinder>N</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>Y</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[N]]></SCOther>
+          <StoragePressure>a</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <HC1PercentByWeight>20.00</HC1PercentByWeight>
+          <HC1Name><![CDATA[Ammonium Hydroxide]]></HC1Name>
+          <HC1EHS>N</HC1EHS>
+          <HC1CAS>1336-21-6</HC1CAS>
+          <HC2PercentByWeight>20.00</HC2PercentByWeight>
+          <HC2Name><![CDATA[Calcium Carbonate]]></HC2Name>
+          <HC2EHS>N</HC2EHS>
+          <HC2CAS>471-34-1</HC2CAS>
+          <HC3PercentByWeight>20.00</HC3PercentByWeight>
+          <HC3Name><![CDATA[Potassium Hydroxide]]></HC3Name>
+          <HC3EHS>N</HC3EHS>
+          <HC3CAS>1310-58-3</HC3CAS>
+          <HC4PercentByWeight>20.00</HC4PercentByWeight>
+          <HC4Name><![CDATA[Sodium Carbonate]]></HC4Name>
+          <HC4EHS>N</HC4EHS>
+          <HC4CAS>497-19-8</HC4CAS>
+          <HC5PercentByWeight>20.00</HC5PercentByWeight>
+          <HC5Name><![CDATA[Sodium Hydroxide]]></HC5Name>
+          <HC5EHS>N</HC5EHS>
+          <HC5CAS>1310-73-2</HC5CAS>
+          <DOTHazardClassificationID>8</DOTHazardClassificationID>
+          <CERSUniqueKey>d3a7a1d1-4c64-44a2-b44a-9327f304d031</CERSUniqueKey>
+        </Chemical>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Stock room and sales floor]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Compressed Gases-Flammable]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Butane Lighters]]></CommonName>
+          <EHS>N</EHS>
+          <CASNumber>106-97-8</CASNumber>
+          <HMType>c</HMType>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>c</PhysicalState>
+          <LargestContainer>1</LargestContainer>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>N</FHCReactive>
+          <FHCPressureRelease>Y</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>1</AverageDailyAmount>
+          <MaximumDailyAmount>1</MaximumDailyAmount>
+          <AnnualWasteAmount>150</AnnualWasteAmount>
+          <StateWasteCode>141</StateWasteCode>
+          <Units>c</Units>
+          <DaysOnSite>180</DaysOnSite>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>N</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>N</SCBox>
+          <SCCylinder>N</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>N</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[Y]]></SCOther>
+          <OtherStorageContainer><![CDATA[Lighters]]></OtherStorageContainer>
+          <StoragePressure>a</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <DOTHazardClassificationID>2.1</DOTHazardClassificationID>
+          <CERSUniqueKey>0887df1b-7991-468a-b467-4e4c788095a6</CERSUniqueKey>
+        </Chemical>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Stock room and sales floor]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Compressed Gases- Non-flammable]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Fire Extinguishers, Freon]]></CommonName>
+          <EHS>N</EHS>
+          <HMType>c</HMType>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>c</PhysicalState>
+          <LargestContainer>1</LargestContainer>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>N</FHCReactive>
+          <FHCPressureRelease>Y</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>1</AverageDailyAmount>
+          <MaximumDailyAmount>1</MaximumDailyAmount>
+          <AnnualWasteAmount>150</AnnualWasteAmount>
+          <StateWasteCode>141</StateWasteCode>
+          <Units>b</Units>
+          <DaysOnSite>180</DaysOnSite>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>N</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>N</SCBox>
+          <SCCylinder>Y</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>N</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[Y]]></SCOther>
+          <StoragePressure>a</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <DOTHazardClassificationID>2.2</DOTHazardClassificationID>
+          <CERSUniqueKey>c951672c-e343-4804-b5b1-cbf2b1488e07</CERSUniqueKey>
+        </Chemical>
+        <Chemical>
+          <ChemicalLocation><![CDATA[Stock room and sales floor]]></ChemicalLocation>
+          <CLConfidential>N</CLConfidential>
+          <ChemicalName><![CDATA[Flammable Liquids]]></ChemicalName>
+          <TradeSecret>N</TradeSecret>
+          <CommonName><![CDATA[Rubbing Alcohol, Cleaners, Nail Polish/Remover, Lighters]]></CommonName>
+          <EHS>N</EHS>
+          <HMType>c</HMType>
+          <RadioActive>N</RadioActive>
+          <PhysicalState>b</PhysicalState>
+          <LargestContainer>1</LargestContainer>
+          <FHCFire>N</FHCFire>
+          <FHCReactive>N</FHCReactive>
+          <FHCPressureRelease>N</FHCPressureRelease>
+          <FHCAcuteHealth>Y</FHCAcuteHealth>
+          <FHCChronicHealth>N</FHCChronicHealth>
+          <AverageDailyAmount>1</AverageDailyAmount>
+          <MaximumDailyAmount>1</MaximumDailyAmount>
+          <AnnualWasteAmount>150</AnnualWasteAmount>
+          <StateWasteCode>214</StateWasteCode>
+          <Units>a</Units>
+          <DaysOnSite>180</DaysOnSite>
+          <SCAboveGroundTank>N</SCAboveGroundTank>
+          <SCUnderGroundTank>N</SCUnderGroundTank>
+          <SCTankInsideBuilding>N</SCTankInsideBuilding>
+          <SCSteelDrum>N</SCSteelDrum>
+          <SCPlasticNonMetallicDrum>N</SCPlasticNonMetallicDrum>
+          <SCCan>N</SCCan>
+          <SCCarboy>N</SCCarboy>
+          <SCSilo>N</SCSilo>
+          <SCFiberDrum>N</SCFiberDrum>
+          <SCBag>N</SCBag>
+          <SCBox>N</SCBox>
+          <SCCylinder>N</SCCylinder>
+          <SCGlassBottle>N</SCGlassBottle>
+          <SCPlasticBottle>Y</SCPlasticBottle>
+          <SCToteBin>N</SCToteBin>
+          <SCTankTruckTankWagon>N</SCTankTruckTankWagon>
+          <SCTankCarRailCar>N</SCTankCarRailCar>
+          <SCOther><![CDATA[N]]></SCOther>
+          <StoragePressure>a</StoragePressure>
+          <StorageTemperature>a</StorageTemperature>
+          <HC1PercentByWeight>40.00</HC1PercentByWeight>
+          <HC1Name><![CDATA[Alcohol]]></HC1Name>
+          <HC1EHS>N</HC1EHS>
+          <HC1CAS>64-17-5</HC1CAS>
+          <HC2PercentByWeight>40.00</HC2PercentByWeight>
+          <HC2Name><![CDATA[Acetone]]></HC2Name>
+          <HC2EHS>N</HC2EHS>
+          <HC2CAS>67-64-1</HC2CAS>
+          <HC3PercentByWeight>10.00</HC3PercentByWeight>
+          <HC3Name><![CDATA[Methyl Ethyl Ketone]]></HC3Name>
+          <HC3EHS>N</HC3EHS>
+          <HC3CAS>78-93-3</HC3CAS>
+          <HC4PercentByWeight>10.00</HC4PercentByWeight>
+          <HC4Name><![CDATA[Mineral Spirits]]></HC4Name>
+          <HC4EHS>N</HC4EHS>
+          <HC4CAS>64475-85-0</HC4CAS>
+          <DOTHazardClassificationID>3</DOTHazardClassificationID>
+          <CERSUniqueKey>2aa72ebc-8fb4-4425-b09e-18d69806382f</CERSUniqueKey>
+        </Chemical>
+      </Chemicals>
+      <SiteMaps>
+        <SiteMap>
+          <SiteMapDocument>
+            <Attachments>
+              <Attachment>
+                <AttachmentFileName>W:\Corporate\RealEstate\New Store Set-up\Hazardous Plans\San Diego County\04162 Site Plan.pdf</AttachmentFileName>
+                <DocumentTitle><![CDATA[Annotated Site Map (Official Use Only)]]></DocumentTitle>
+                <DocumentDescription />
+                <DateAuthored>2012-10-16T07:00:00Z</DateAuthored>
+                <DocumentRegulatorKey />
+                <CERSUniqueKey>73e93f7c-13bc-4e75-ad00-548b6e01fb25</CERSUniqueKey>
+              </Attachment>
+            </Attachments>
+          </SiteMapDocument>
+        </SiteMap>
+      </SiteMaps>
+    </HazardousMaterialsInventory>
+    <EmergencyResponseTrainingPlans>
+      <SubmittalElementHeader>
+        <SubmittedOn>2012-10-17T15:08:39Z</SubmittedOn>
+        <SubmittedByFirstName><![CDATA[Amy]]></SubmittedByFirstName>
+        <SubmittedByLastName><![CDATA[Smalls]]></SubmittedByLastName>
+        <SubmittedByEmail><![CDATA[asmalls@dollartree.com]]></SubmittedByEmail>
+        <RegulatorCode>3700</RegulatorCode>
+        <SubmittalStatus>5</SubmittalStatus>
+        <SubmittalActionDetails>
+          <SubmittalActionOn>2012-10-17T23:41:54Z</SubmittalActionOn>
+          <SubmittalActionAgentName><![CDATA[Michelle Price]]></SubmittalActionAgentName>
+          <SubmittalActionAgentEmail><![CDATA[michelle.price@sdcounty.ca.gov]]></SubmittalActionAgentEmail>
+          <SubmittalActionComments><![CDATA[Please contact Kelly Robertson at 619-778-2167 or via email at kelly.robertson@sdcounty.ca.gov]]></SubmittalActionComments>
+        </SubmittalActionDetails>
+        <CERSUniqueKey>a6a35c59-e476-4edb-8353-8853c1606474</CERSUniqueKey>
+      </SubmittalElementHeader>
+      <EmergencyResponseContingencyPlans>
+        <EmergencyResponseContingencyPlan>
+          <EmergencyResponseContingencyPlanDocument>
+            <Attachments>
+              <Attachment>
+                <AttachmentFileName>W:\Corporate\RealEstate\New Store Set-up\Hazardous Plans\Store Spill Poster.pdf</AttachmentFileName>
+                <DocumentTitle><![CDATA[MSDS]]></DocumentTitle>
+                <DocumentDescription />
+                <DateAuthored>2012-10-16T07:00:00Z</DateAuthored>
+                <DocumentRegulatorKey />
+                <CERSUniqueKey>227096d7-201c-4979-b575-96e1cdb940a2</CERSUniqueKey>
+              </Attachment>
+              <Attachment>
+                <AttachmentFileName>W:\Corporate\RealEstate\New Store Set-up\Hazardous Plans\San Diego County\04162 Emergency Response Plan.doc</AttachmentFileName>
+                <DocumentTitle><![CDATA[Emergency Response/Contingency Plan]]></DocumentTitle>
+                <DocumentDescription />
+                <DateAuthored>2012-10-16T07:00:00Z</DateAuthored>
+                <DocumentRegulatorKey />
+                <CERSUniqueKey>8c7b700d-2f05-4746-9c66-b53f4155a98c</CERSUniqueKey>
+              </Attachment>
+              <Attachment>
+                <AttachmentFileName>W:\Corporate\RealEstate\New Store Set-up\Hazardous Plans\San Diego County\04162 Emergency Response Plan.doc</AttachmentFileName>
+                <DocumentTitle><![CDATA[Emergency Response/Contingency Plan]]></DocumentTitle>
+                <DocumentDescription />
+                <DateAuthored>2012-10-17T07:00:00Z</DateAuthored>
+                <DocumentRegulatorKey />
+                <CERSUniqueKey>f2f63d6a-f662-4895-a933-42c5ec60dc1d</CERSUniqueKey>
+              </Attachment>
+            </Attachments>
+          </EmergencyResponseContingencyPlanDocument>
+        </EmergencyResponseContingencyPlan>
+      </EmergencyResponseContingencyPlans>
+      <EmployeeTrainingPlans>
+        <EmployeeTrainingPlan>
+          <EmployeeTrainingPlanDocument>
+            <Attachments>
+              <Attachment>
+                <AttachmentFileName>W:\Corporate\RealEstate\New Store Set-up\Hazardous Plans\Employee Training Description.doc</AttachmentFileName>
+                <DocumentTitle><![CDATA[Employee Training Plan]]></DocumentTitle>
+                <DocumentDescription />
+                <DateAuthored>2012-10-16T07:00:00Z</DateAuthored>
+                <DocumentRegulatorKey />
+                <CERSUniqueKey>b7fa47b5-a0aa-4dd3-851a-35e4a6a84b46</CERSUniqueKey>
+              </Attachment>
+            </Attachments>
+          </EmployeeTrainingPlanDocument>
+        </EmployeeTrainingPlan>
+      </EmployeeTrainingPlans>
+    </EmergencyResponseTrainingPlans>
+  </FacilitySubmittal>
+</cers:RegulatorFacilitySubmittals>

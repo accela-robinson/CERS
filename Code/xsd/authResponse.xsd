@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GovXML" targetNamespace="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML" xmlns:mstns="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML" xmlns="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="GovXML" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AuthenticateUserResponse">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AboutExpiredDays" type="xs:string" minOccurs="0" />
+              <xs:element name="AllowChangePassword" type="xs:string" minOccurs="0" />
+              <xs:element name="ActiveInspector" type="xs:string" minOccurs="0" />
+              <xs:element name="System" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ServiceProviderCode" type="xs:string" minOccurs="0" />
+                    <xs:element name="ApplicationState" type="xs:string" minOccurs="0" />
+                    <xs:element name="Context" type="xs:string" minOccurs="0" />
+                    <xs:element name="LanguageID" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="InspectorId" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Keys" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Key" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

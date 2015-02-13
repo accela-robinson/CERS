@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cers="http://cersservices.calepa.ca.gov/Schemas/RegulatorCMESubmit/1/04/" targetNamespace="http://cersservices.calepa.ca.gov/Schemas/RegulatorCMESubmit/1/04/">
+	<xs:annotation>
+		<xs:documentation>
+			This XSD schema is for Regulator CME Submittal Import endpoints.
+		</xs:documentation>
+	</xs:annotation>
+	<xs:element name="CMESubmittals" type="cers:CMESubmittalsType"/>
+	<xs:complexType name="CMESubmittalsType">
+		<xs:sequence>
+			<xs:element name="RegulatorTransactionKey" nillable="false" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>20.0003</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="36"/>
+						<xs:minLength value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Inspections" type="cers:InspectionsType" nillable="true">
+					<xs:annotation>
+						<xs:documentation>A collection of Inspection entities.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Enforcements" type="cers:EnforcementsType" nillable="true">
+					<xs:annotation>
+						<xs:documentation>A collection of Enforcement entites.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Violations" type="cers:ViolationsType" nillable="true">
+					<xs:annotation>
+						<xs:documentation>A collection of violation entities.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="EnforcementViolations" type="cers:EnforcementViolationsType" nillable="true">
+					<xs:annotation>
+						<xs:documentation>A collection of EnforcementViolation entities.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CMEHeaderType">
+		<xs:annotation>
+			<xs:documentation>Common header information associated with a CME Entity</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="RegulatorCode">
+				<xs:annotation>
+					<xs:documentation>20.0001</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:positiveInteger">
+						<xs:minInclusive value="1001"/>
+						<xs:maxInclusive value="9999"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="RegulatorActionDateTime" type="xs:dateTime" nillable="false">
+				<xs:annotation>
+					<xs:documentation>20.0040</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CMEDataStatus" type="cers:CMEDataStatusType" nillable="false">
+				<xs:annotation>
+					<xs:documentation>20.0041</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="CMEDataStatusType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation>Approved is valid for EDT submissions.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation>Deleted is valid for EDT submissions.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="InspectionsType">
+		<xs:sequence>
+			<xs:element name="Inspection" type="cers:InspectionType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InspectionType">
+		<xs:annotation>
+			<xs:documentation>Inspection type corresponds to Chapter 5/Inspection Information in the Unified Program Data Dictionary</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InspectionHeader" type="cers:CMEHeaderType"/>
+			<xs:element name="CERSID" type="cers:CERSIDType" nillable="false">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">1a</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InspectionRegulatorKey" type="cers:RegulatorEntityKeyType">
+				<xs:annotation>
+					<xs:documentation>20.0045</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProgramElement">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">905</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="cers:ProgramElementType">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="OccurredOn" type="xs:date">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">906</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Type">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">907</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="a"/>
+						<xs:enumeration value="b"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ClassIViolationCount">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">910</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:nonNegativeInteger">
+						<xs:totalDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ClassIIViolationCount">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">911</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:nonNegativeInteger">
+						<xs:totalDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MinorViolationCount">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">912</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:nonNegativeInteger">
+						<xs:totalDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SOCDetermination" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">913a</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="a"/>
+						<xs:enumeration value="b"/>
+						<xs:enumeration value="c"/>
+						<xs:enumeration value="d"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ViolationsRTCOn" type="xs:date" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">917</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Comment" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">929</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="cers:CommentType">
+						<xs:minLength value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EnforcementsType">
+		<xs:sequence>
+			<xs:element name="Enforcement" type="cers:EnforcementType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EnforcementType">
+		<xs:annotation>
+			<xs:documentation>Enforcement type corresponds to Chapter 5/Enforcement Information in the Unified Program Data Dictionary</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="EnforcementHeader" type="cers:CMEHeaderType"/>
+			<xs:element name="CERSID" type="cers:CERSIDType">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">1a</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EnforcementRegulatorKey" type="cers:RegulatorEntityKeyType">
+				<xs:annotation>
+					<xs:documentation>20.0047</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RedTagIssued" type="cers:YesNoFlagType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">913b</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RedTagNumber" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">913c</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ViolationsCausingRedTag" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">913d</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1"/>
+						<xs:enumeration value="2"/>
+						<xs:enumeration value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="RedTagAffixedOn" type="xs:date" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">913e</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RedTagRemovedOn" type="xs:date" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">913f</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Type">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">914</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="a"/>
+						<xs:enumeration value="b"/>
+						<xs:enumeration value="c"/>
+						<xs:enumeration value="d"/>
+						<xs:enumeration value="e"/>
+						<xs:enumeration value="f"/>
+						<xs:enumeration value="g"/>
+						<xs:enumeration value="h"/>
+						<xs:enumeration value="i"/>
+						<xs:enumeration value="j"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="OccurredOn" type="xs:date">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">915</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FormalType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">916</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="a"/>
+						<xs:enumeration value="b"/>
+						<xs:enumeration value="c"/>
+						<xs:enumeration value="d"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CaseSettledDroppedOn" type="xs:date" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">917a</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocketNumber" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">918</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FineAssessedAmount" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">919</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:nonNegativeInteger">
+						<xs:totalDigits value="8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SEPAmount" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">920</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:nonNegativeInteger">
+						<xs:totalDigits value="8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Comment" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">925</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="cers:CommentType">
+						<xs:minLength value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ViolationsType">
+		<xs:sequence>
+			<xs:element name="Violation" type="cers:ViolationType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ViolationType">
+		<xs:annotation>
+			<xs:documentation>Violation type corresponds to Chapter 5/Violation Information in the Unified Program Data Dictionary</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ViolationHeader" type="cers:CMEHeaderType"/>
+			<xs:element name="InspectionRegulatorKey" type="cers:RegulatorEntityKeyType">
+				<xs:annotation>
+					<xs:documentation>20.0045</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ViolationRegulatorKey" type="cers:RegulatorEntityKeyType">
+				<xs:annotation>
+					<xs:documentation>20.0046</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TypeID">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">930</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="7"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Class">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">931</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1"/>
+						<xs:enumeration value="2"/>
+						<xs:enumeration value="9"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="OccurredOn" type="xs:date">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">932</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ScheduledRTCOn" type="xs:date" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">933</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActualRTCOn" type="xs:date" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">934</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActualRTCQualifier" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">935</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1"/>
+						<xs:enumeration value="2"/>
+						<xs:enumeration value="3"/>
+						<xs:enumeration value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Comment" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation source="UPDDIdentifier">936</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="cers:CommentType">
+						<xs:minLength value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EnforcementViolationsType">
+		<xs:sequence>
+			<xs:element name="EnforcementViolation" type="cers:EnforcementViolationType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EnforcementViolationType">
+		<xs:sequence>
+			<xs:element name="EnforcementViolationHeader" type="cers:CMEHeaderType"/>
+			<xs:element name="EnforcementRegulatorKey" type="cers:RegulatorEntityKeyType">
+				<xs:annotation>
+					<xs:documentation>20.0047</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ViolationRegulatorKey" type="cers:RegulatorEntityKeyType">
+				<xs:annotation>
+					<xs:documentation>20.0046</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EnforcementViolationRegulatorKey" type="cers:RegulatorEntityKeyType">
+				<xs:annotation>
+					<xs:documentation>20.0048</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="RegulatorKeyType">
+		<xs:restriction base="cers:GUID"/>
+	</xs:simpleType>
+	<xs:simpleType name="GUID">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\})"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ProgramElementType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="a"/>
+			<xs:enumeration value="b"/>
+			<xs:enumeration value="c"/>
+			<xs:enumeration value="d"/>
+			<xs:enumeration value="e"/>
+			<xs:enumeration value="f"/>
+			<xs:enumeration value="g"/>
+			<xs:enumeration value="h"/>
+			<xs:enumeration value="i"/>
+			<xs:enumeration value="j"/>
+			<xs:enumeration value="k"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CERSIDType">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:totalDigits value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="YesNoFlagType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Y"/>
+			<xs:enumeration value="N"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CommentType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RegulatorEntityKeyType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="36"/>
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

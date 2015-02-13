@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="gb2312"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML">
+  <xsd:element name="GovXML">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="GetInspections">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="System">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="XMLVersion" type="xsd:unsignedShort" />
+                    <xsd:element name="ServiceProviderCode" type="xsd:string" />
+                    <xsd:element name="Username" type="xsd:string" />
+                    <xsd:element name="MaxRows" type="xsd:unsignedByte" />
+                    <xsd:element name="StartRow" type="xsd:unsignedByte" />
+                    <xsd:element name="EndRow" type="xsd:unsignedByte" />
+                    <xsd:element name="TotalRows" type="xsd:unsignedByte" />
+                    <xsd:element name="ApplicationState" type="xsd:integer" />
+                    <xsd:element name="Context" type="xsd:string" />
+                    <xsd:element name="LanguageID" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="Contacts" />
+              <xsd:element name="InspectionTypes">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="InspectionType">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Keys">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="autoAssign" type="xsd:boolean" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="scheduledDateRanges">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="DateRange">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="from" type="xsd:date" />
+                          <xsd:element name="to" type="xsd:date" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="InspectionStatus">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Keys">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Key" type="xsd:string" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="returnElements">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" name="returnElement" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="CAPTypeIds">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="CAPTypeId">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Keys">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xs:schema>

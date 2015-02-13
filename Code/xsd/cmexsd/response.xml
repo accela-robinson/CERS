@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cers:CMESubmittalResponse xmlns:cers="http://cersservices.calepa.ca.gov/Schemas/RegulatorCMESubmit/1/04/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cersservices.calepa.ca.gov/Schemas/RegulatorCMESubmit/1/04/ http://cersservices.calepa.ca.gov/Schemas/1/04/RegulatorCMESubmit.xsd">
+  <Transaction>
+    <TransactionKey>9e98ba18-22a0-4b9c-ad27-e1cf2881db6a</TransactionKey>
+    <RegulatorTransactionKey />
+    <TransactionReceived>2012-12-03T05:46:09.2448723-08:00</TransactionReceived>
+    <TransactionStatus>4</TransactionStatus>
+    <DetailUri></DetailUri>
+  </Transaction>
+  <Summary>
+    <DataProcessedOn>2012-12-03T05:46:09.3073595-08:00</DataProcessedOn>
+    <ErrorSummary></ErrorSummary>
+    <RequiredSummary>XML did not pass schema validation. Found 2 Required Guidance Messages.</RequiredSummary>
+    <WarningSummary></WarningSummary>
+    <AdvisorySummary></AdvisorySummary>
+  </Summary>
+  <EntityKeys />
+  <GuidanceMessages>
+    <GuidanceMessage guidanceCode="1066" level="Required" entityResource="CMEI" regulatorKey="7d97199a-1f4c-4b46-8241-0b86e3f3c2e6">XML Schema Validation Error: InspectionRegulatorKey "7d97199a-1f4c-4b46-8241-0b86e3f3c2e6": The element 'InspectionHeader' has incomplete content. List of possible elements expected: 'CMEDataStatus'.</GuidanceMessage>
+    <GuidanceMessage guidanceCode="1066" level="Required" entityResource="CMEI" regulatorKey="7d97199a-1f4c-4b46-8241-0b86e3f3c2e6">XML Schema Validation Error: InspectionRegulatorKey "7d97199a-1f4c-4b46-8241-0b86e3f3c2e6": The element 'Inspection' has invalid child element 'OccurredOn'. List of possible elements expected: 'ProgramElement'.</GuidanceMessage>
+  </GuidanceMessages>
+</cers:CMESubmittalResponse>

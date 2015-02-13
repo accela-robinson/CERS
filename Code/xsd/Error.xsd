@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GovXML" targetNamespace="http://www.accela.com/schema/AccelaWirelessXML" xmlns:mstns="http://www.accela.com/schema/AccelaWirelessXML" xmlns="http://www.accela.com/schema/AccelaWirelessXML" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="GovXML" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="UpdateCAPResponse">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="System" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="XMLVersion" type="xs:unsignedShort"/>
+										<xs:element name="ServiceProviderCode" type="xs:string"/>
+										<xs:element name="Username" type="xs:string"/>
+										<xs:element name="MaxRows" type="xs:unsignedByte"/>
+										<xs:element name="StartRow" type="xs:unsignedByte"/>
+										<xs:element name="EndRow" type="xs:unsignedByte"/>
+										<xs:element name="TotalRows" type="xs:unsignedByte"/>
+										<xs:element name="ApplicationState" type="xs:string"/>
+										<xs:element name="Context" type="xs:string"/>
+										<xs:element name="LanguageID" type="xs:string"/>
+										<xs:element name="Error" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ErrorCode" type="xs:string" minOccurs="0"/>
+													<xs:element name="ErrorMessage" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

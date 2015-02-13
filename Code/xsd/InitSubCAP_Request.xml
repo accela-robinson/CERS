@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GovXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML">
+  <UpdateCAP>
+    <System>
+      <XMLVersion>720</XMLVersion>
+      <ServiceProviderCode>ADBC</ServiceProviderCode>
+      <Username>ADMIN</Username>
+      <MaxRows>50</MaxRows>
+      <StartRow>1</StartRow>
+      <EndRow>0</EndRow>
+      <TotalRows>0</TotalRows>
+      <ApplicationState>19589437014373144703</ApplicationState>
+      <Context>AccelaMobileOffice</Context>
+      <LanguageID>en-US</LanguageID>
+    </System>
+    <contextType>Update</contextType>
+    <CAPId>
+      <Keys>
+        <Key>12CAP</Key>
+        <Key>00000</Key>
+        <Key>001QW</Key>
+      </Keys>
+    </CAPId>
+    <Addresses />
+    <CAPRelations>
+      <CAPRelation action="Add">
+        <CAPId>
+          <Keys>
+            <Key>12CAP</Key>
+            <Key>00000</Key>
+            <Key>001QY</Key>
+          </Keys>
+          <Value>12CAP-00001898</Value>
+        </CAPId>
+        <contextType>Child</contextType>
+      </CAPRelation>
+    </CAPRelations>
+    <Contacts />
+    <ParcelIds>
+      <ParcelId action="Update">
+        <Keys>
+          <Key>12212</Key>
+        </Keys>
+        <IdentifierDisplay>12212</IdentifierDisplay>
+        <Value>12212</Value>
+      </ParcelId>
+      <ParcelId action="Update">
+        <Keys>
+          <Key>123123123</Key>
+        </Keys>
+        <IdentifierDisplay>123123123</IdentifierDisplay>
+        <Value>123123123</Value>
+      </ParcelId>
+    </ParcelIds>
+    <Status>
+      <Value />
+      <Date>2012-11-28</Date>
+      <Keys>
+        <Key />
+      </Keys>
+    </Status>
+  </UpdateCAP>
+</GovXML>

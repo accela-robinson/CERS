@@ -1,0 +1,150 @@
+<!-- The configuration is generic query in Accela Automation required for CERS integration -->
+<customSql>
+    <sqlQuery name="CERS_CheckRecordKeyFromCERSID" maxRows="10">
+        <select>SELECT B1_checklist_comment AS uniquekey, B1_PER_ID1,B1_PER_ID2,B1_PER_ID3 
+		from BCHCKBOX BK</select>
+        <where>
+            <parameter name="SERV_PROV_CODE" alias="BK" column="SERV_PROV_CODE" dataType="String" operator="=" logic="AND" isRequired="true" />
+            <parameter name="uniquekey" alias="BK" column="B1_checklist_comment" dataType="String" operator="=" logic="AND" />
+            <parameter name="cersfield" alias="BK" column="B1_CHECKBOX_DESC" dataType="String" operator="=" logic="AND" />
+        </where>
+    </sqlQuery>
+    <sqlQuery name="CERS_CheckCERSIDFromRecordKey" maxRows="10">
+        <select>SELECT B1_CHECKLIST_COMMENT, B1_PER_ID1,B1_PER_ID2,B1_PER_ID3
+		from BCHCKBOX BK</select>
+        <where>
+            <parameter name="SERV_PROV_CODE" alias="BK" column="SERV_PROV_CODE" dataType="String" operator="=" logic="AND" isRequired="true" />
+            <parameter name="B1_PER_ID1" alias="BK" column="B1_PER_ID1" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID2" alias="BK" column="B1_PER_ID2" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID3" alias="BK" column="B1_PER_ID3" dataType="String" operator="=" logic="AND" />
+            <parameter name="b1_per_sub_type" alias="BK" column="b1_per_sub_type" dataType="String" operator="=" logic="AND" />
+            <parameter name="b1_checkbox_type" alias="BK" column="b1_checkbox_type" dataType="String" operator="=" logic="AND" />
+            <parameter name="b1_checkbox_desc" alias="BK" column="b1_checkbox_desc" dataType="String" operator="=" logic="AND" />
+        </where>
+    </sqlQuery>
+    <sqlQuery name="CERS_CheckParecntCERSID" maxRows="1">
+        <select>SELECT BC.B1_CHECKLIST_COMMENT FROM B1PERMIT B1 INNER JOIN
+		BCHCKBOX BC ON B1.SERV_PROV_CODE = BC.SERV_PROV_CODE AND B1.B1_PER_ID1 = BC.B1_PER_ID1 AND
+		B1.B1_PER_ID2 = BC.B1_PER_ID2 AND B1.B1_PER_ID3 = BC.B1_PER_ID3 INNER JOIN
+		XAPP2REF XA ON XA.SERV_PROV_CODE = B1.SERV_PROV_CODE AND XA.B1_MASTER_ID1 = B1.B1_PER_ID1
+		AND XA.B1_MASTER_ID2 = B1.B1_PER_ID2 AND XA.B1_MASTER_ID3 = B1.B1_PER_ID3
+	</select>
+        <where>
+            <parameter name="SERV_PROV_CODE" alias="B1" column="SERV_PROV_CODE" dataType="String" operator="=" logic="AND" isRequired="true" />
+            <parameter name="B1_PER_ID1" alias="XA" column="B1_PER_ID1" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID2" alias="XA" column="B1_PER_ID2" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID3" alias="XA" column="B1_PER_ID3" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_GROUP" alias="B1" column="B1_PER_GROUP" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_TYPE" alias="B1" column="B1_PER_TYPE" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_SUB_TYPE" alias="B1" column="B1_PER_SUB_TYPE" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_CATEGORY" alias="B1" column="B1_PER_CATEGORY" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_ACT_STATUS" alias="BC" column="B1_ACT_STATUS" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_CHECKBOX_TYPE" alias="BC" column="B1_CHECKBOX_TYPE" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_CHECKBOX_DESC" alias="BC" column="B1_CHECKBOX_DESC" dataType="String" operator="=" logic="AND" />
+        </where>
+    </sqlQuery>
+    <sqlQuery name="CERS_CheckParecntCERSIDANDTEXT" maxRows="1">
+        <select>SELECT BC.B1_CHECKLIST_COMMENT AS CERSID,
+		b1.b1_special_text,XA.B1_MASTER_ID1,XA.B1_MASTER_ID2,XA.B1_MASTER_ID3
+		FROM B1PERMIT B1 INNER JOIN
+		BCHCKBOX BC ON B1.SERV_PROV_CODE = BC.SERV_PROV_CODE AND B1.B1_PER_ID1 = BC.B1_PER_ID1 AND
+		B1.B1_PER_ID2 = BC.B1_PER_ID2 AND B1.B1_PER_ID3 = BC.B1_PER_ID3 INNER JOIN
+		XAPP2REF XA ON XA.SERV_PROV_CODE = B1.SERV_PROV_CODE AND XA.b1_master_id1 = B1.B1_PER_ID1
+		AND XA.b1_master_id2 = B1.B1_PER_ID2 AND XA.b1_master_id3 = B1.B1_PER_ID3
+	</select>
+        <where>
+            <parameter name="SERV_PROV_CODE" alias="B1" column="SERV_PROV_CODE" dataType="String" operator="=" logic="AND" isRequired="true" />
+            <parameter name="B1_PER_ID1" alias="XA" column="B1_PER_ID1" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID2" alias="XA" column="B1_PER_ID2" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID3" alias="XA" column="B1_PER_ID3" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_GROUP" alias="B1" column="B1_PER_GROUP" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_TYPE" alias="B1" column="B1_PER_TYPE" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_SUB_TYPE" alias="B1" column="B1_PER_SUB_TYPE" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_CATEGORY" alias="B1" column="B1_PER_CATEGORY" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_ACT_STATUS" alias="BC" column="B1_ACT_STATUS" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_CHECKBOX_TYPE" alias="BC" column="B1_CHECKBOX_TYPE" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_CHECKBOX_DESC" alias="BC" column="B1_CHECKBOX_DESC" dataType="String" operator="=" logic="AND" />
+        </where>
+    </sqlQuery>
+    <sqlQuery name="CERS_CheckParecntFacilityID" maxRows="1">
+        <select>SELECT BC.B1_CHECKLIST_COMMENT AS FacilityID
+		FROM B1PERMIT B1 INNER JOIN
+		BCHCKBOX BC ON B1.SERV_PROV_CODE = BC.SERV_PROV_CODE AND B1.B1_PER_ID1 = BC.B1_PER_ID1 AND
+		B1.B1_PER_ID2 = BC.B1_PER_ID2 AND B1.B1_PER_ID3 = BC.B1_PER_ID3 INNER JOIN
+		XAPP2REF XA ON XA.SERV_PROV_CODE = B1.SERV_PROV_CODE AND XA.b1_master_id1 = B1.B1_PER_ID1
+		AND XA.b1_master_id2 = B1.B1_PER_ID2 AND XA.b1_master_id3 = B1.B1_PER_ID3
+	</select>
+        <where>
+            <parameter name="SERV_PROV_CODE" alias="B1" column="SERV_PROV_CODE" dataType="String" operator="=" logic="AND" isRequired="true" />
+            <parameter name="B1_PER_ID1" alias="XA" column="B1_PER_ID1" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID2" alias="XA" column="B1_PER_ID2" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID3" alias="XA" column="B1_PER_ID3" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_CHECKBOX_TYPE" alias="BC" column="B1_CHECKBOX_TYPE" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_CHECKBOX_DESC" alias="BC" column="B1_CHECKBOX_DESC" dataType="String" operator="=" logic="AND" />
+        </where>
+    </sqlQuery>
+    <sqlQuery name="CERS_SearchChildRecordID" maxRows="1000">
+        <select>SELECT XA.B1_PER_ID1, XA.B1_PER_ID2, XA.B1_PER_ID3,
+		B1.B1_PER_GROUP, B1.B1_PER_TYPE, B1.B1_PER_SUB_TYPE,
+		B1.B1_PER_CATEGORY FROM B1PERMIT B1 INNER JOIN XAPP2REF XA
+		ON XA.SERV_PROV_CODE = B1.SERV_PROV_CODE AND XA.B1_PER_ID1 = B1.B1_PER_ID1
+		AND XA.B1_PER_ID2 = B1.B1_PER_ID2 AND XA.B1_PER_ID3 = B1.B1_PER_ID3
+	</select>
+        <where>
+            <parameter name="SERV_PROV_CODE" alias="XA" column="SERV_PROV_CODE" dataType="String" operator="=" logic="AND" isRequired="true" />
+            <parameter name="B1_MASTER_ID1" alias="XA" column="B1_MASTER_ID1" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_MASTER_ID2" alias="XA" column="B1_MASTER_ID2" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_MASTER_ID3" alias="XA" column="B1_MASTER_ID3" dataType="String" operator="=" logic="AND" />
+            <parameter name="REC_STATUS" alias="XA" column="REC_STATUS" dataType="String" operator="=" logic="AND" />
+        </where>
+    </sqlQuery>
+    <sqlQuery name="CERS_SearchCountry" maxRows="1000">
+        <select>SELECT BIZDOMAIN_VALUE,VALUE_DESC FROM RBIZDOMAIN_VALUE RV
+	</select>
+        <where>
+            <parameter name="BIZDOMAIN" alias="RV" column="BIZDOMAIN" dataType="String" operator="=" logic="AND" isRequired="true" />
+        </where>
+    </sqlQuery>
+	<sqlQuery name="CERS_GetASIInfoList" maxRows="1000">
+        <select>SELECT B1_ACT_STATUS, B1_CHECKBOX_TYPE, B1_CHECKBOX_DESC, B1_CHECKLIST_COMMENT  FROM BCHCKBOX BK
+		</select>
+        <where>
+            <parameter name="SERV_PROV_CODE" alias="BK" column="SERV_PROV_CODE" dataType="String" operator="=" logic="AND" isRequired="true" />
+            <parameter name="B1_PER_ID1" alias="BK" column="B1_PER_ID1" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID2" alias="BK" column="B1_PER_ID2" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID3" alias="BK" column="B1_PER_ID3" dataType="String" operator="=" logic="AND" />
+        </where>
+    </sqlQuery>
+	<sqlQuery name="CERS_GetASITableInfoList" maxRows="1000">
+        <select>SELECT A.GROUP_NAME,A.TABLE_NAME,A.COLUMN_NAME,A.ROW_INDEX,A.ATTRIBUTE_VALUE FROM BAPPSPECTABLE_VALUE A
+		</select>
+        <where>
+            <parameter name="SERV_PROV_CODE" alias="A" column="SERV_PROV_CODE" dataType="String" operator="=" logic="AND" isRequired="true" />
+            <parameter name="B1_PER_ID1" alias="A" column="B1_PER_ID1" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID2" alias="A" column="B1_PER_ID2" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID3" alias="A" column="B1_PER_ID3" dataType="String" operator="=" logic="AND" />
+        </where>
+    </sqlQuery>
+	<sqlQuery name="CERS_GetDocumentIDs" maxRows="1000">
+        <select>SELECT DOC_SEQ_NBR FROM BDOCUMENT A
+		</select>
+        <where>
+            <parameter name="SERV_PROV_CODE" alias="A" column="SERV_PROV_CODE" dataType="String" operator="=" logic="AND" isRequired="true" />
+            <parameter name="B1_PER_ID1" alias="A" column="B1_PER_ID1" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID2" alias="A" column="B1_PER_ID2" dataType="String" operator="=" logic="AND" />
+            <parameter name="B1_PER_ID3" alias="A" column="B1_PER_ID3" dataType="String" operator="=" logic="AND" />
+        </where>
+    </sqlQuery>
+	<sqlQuery name="CERS_GetDefaultStatusByCapType" maxRows="1000">
+        <select>SELECT APP_STATUS_GROUP_CODE, APP_DEFAULT_STATUS_CODE,R1_PER_GROUP,R1_PER_TYPE,R1_PER_SUB_TYPE,R1_PER_CATEGORY  FROM R3APPTYP A
+		</select>
+        <where>
+            <parameter name="SERV_PROV_CODE" alias="A" column="SERV_PROV_CODE" dataType="String" operator="=" logic="AND" isRequired="true" />
+            <parameter name="R1_PER_GROUP" alias="A" column="R1_PER_GROUP" dataType="String" operator="=" logic="AND" />
+            <parameter name="R1_PER_TYPE" alias="A" column="R1_PER_TYPE" dataType="String" operator="=" logic="AND" />
+            <parameter name="R1_PER_SUB_TYPE" alias="A" column="R1_PER_SUB_TYPE" dataType="String" operator="=" logic="AND" />
+			<parameter name="R1_PER_CATEGORY" alias="A" column="R1_PER_CATEGORY" dataType="String" operator="=" logic="AND" />
+        </where>
+    </sqlQuery>
+	
+</customSql>

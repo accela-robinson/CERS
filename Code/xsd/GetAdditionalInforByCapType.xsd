@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GovXML" targetNamespace="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML" xmlns:mstns="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML" xmlns="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="GovXML" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GetAdditionalInformationGroups">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="contextType" type="xs:string" minOccurs="0" />
+              <xs:element name="System" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="XMLVersion" type="xs:string" minOccurs="0" />
+                    <xs:element name="ServiceProviderCode" type="xs:string" minOccurs="0" />
+                    <xs:element name="Username" type="xs:string" minOccurs="0" />
+                    <xs:element name="MaxRows" type="xs:string" minOccurs="0" />
+                    <xs:element name="StartRow" type="xs:string" minOccurs="0" />
+                    <xs:element name="EndRow" type="xs:string" minOccurs="0" />
+                    <xs:element name="TotalRows" type="xs:string" minOccurs="0" />
+                    <xs:element name="ApplicationState" type="xs:string" minOccurs="0" />
+                    <xs:element name="Context" type="xs:string" minOccurs="0" />
+                    <xs:element name="LanguageID" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CAPTypeIds" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="CAPTypeId" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Keys" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Key" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent msdata:ColumnName="Key_Text" msdata:Ordinal="0">
+                                      <xs:extension base="xs:string">
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

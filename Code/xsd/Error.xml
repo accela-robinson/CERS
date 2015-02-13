@@ -1,0 +1,20 @@
+<GovXML xmlns="http://www.accela.com/schema/AccelaWirelessXML">
+	<UpdateCAPResponse>
+		<System>
+			<XMLVersion>720</XMLVersion>
+			<ServiceProviderCode>COSD</ServiceProviderCode>
+			<Username>ADMIN</Username>
+			<MaxRows>0</MaxRows>
+			<StartRow>0</StartRow>
+			<EndRow>0</EndRow>
+			<TotalRows>0</TotalRows>
+			<ApplicationState>12356517249495938109</ApplicationState>
+			<Context>AccelaMobileOffic</Context>
+			<Error>
+				<ErrorCode>1013</ErrorCode>
+				<ErrorMessage>Error while update Record:null</ErrorMessage>
+			</Error>
+			<LanguageID>en-US</LanguageID>
+		</System>
+	</UpdateCAPResponse>
+</GovXML>

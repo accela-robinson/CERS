@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<GovXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML">
+  <InitiateCAPResponse>
+    <System>
+      <XMLVersion>720</XMLVersion>
+      <ServiceProviderCode>ADBC</ServiceProviderCode>
+      <Username>ADMIN</Username>
+      <MaxRows>50</MaxRows>
+      <StartRow>1</StartRow>
+      <EndRow>0</EndRow>
+      <TotalRows>0</TotalRows>
+      <ApplicationState>68169548519986884772</ApplicationState>
+      <Context>AccelaMobileOffice</Context>
+      <Messages>
+        <Message>
+          <Code>-3</Code>
+          <Text>(Script Engine) com.accela.aa.exception.ObjectNotFoundException:Script not found: Server provide code:ADBC, script ID:ContactAddAfter</Text>
+          <Detail>Script Engine did not return an output. Detail:com.accela.aa.exception.ObjectNotFoundException:ContactAddAfter:&lt;aa_exception&gt;
+
+	&lt;exception_id&gt;121128155701896&lt;/exception_id&gt;
+
+	&lt;exception-localized-message&gt;Script not found: Server provide code:ADBC, script ID:ContactAddAfter&lt;/exception-localized-message&gt;
+
+	&lt;exception_stack_trace&gt;
+	&lt;exception-message-keys&gt;
+
+		&lt;exception-message-key&gt;ADBC&lt;exception-message-key&gt;
+
+		&lt;exception-message-key&gt;ContactAddAfter&lt;exception-message-key&gt;
+
+	&lt;/exception-message-keys&gt;
+
+com.accela.aa.exception.ObjectNotFoundException: ScriptNotFoundException
+	at com.accela.aa.emse.emse.ScriptDAOOracle.getScriptByPK(ScriptDAOOracle.java:170)
+	at com.accela.aa.emse.emse.EMSEBusiness.handleScript(EMSEBusiness.java:140)
+	at com.accela.aa.emse.emse.EMSEBusiness.handleEvent(EMSEBusiness.java:346)
+	at com.accela.aa.emse.emse.EMSEBusiness.handleEvent(EMSEBusiness.java:268)
+	at com.accela.aa.emse.emse.EMSEBusiness.handleEventBiz(EMSEBusiness.java:1011)
+	at com.accela.aa.emse.emse.EMSEBusiness.handleEventBiz(EMSEBusiness.java:989)
+	at com.accela.aa.aaxml.govxml.helper.ConvertHelper.processEvent(ConvertHelper.java:3553)
+	at com.accela.aa.aaxml.govxml.helper.CapXML.handleCapContactForMultiLicenses(CapXML.java:5788)
+	at com.accela.aa.aaxml.govxml.helper.CapXML.finalizeCap(CapXML.java:1838)
+	at com.accela.aa.aaxml.govxml.helper.CapXML.initialCap(CapXML.java:742)
+	at com.accela.aa.aaxml.govxml.operations.InitiateCAPOperation.performOperation(InitiateCAPOperation.java:61)
+	at com.accela.aa.aaxml.govxml.operations.GovXMLOperation.execute(GovXMLOperation.java:134)
+	at com.accela.aa.aaxml.govxml.helper.GovXMLHelper.executeGovXML(GovXMLHelper.java:214)
+	at com.accela.govxml.GovXMLBusiness.processGovXML(GovXMLBusiness.java:452)
+	at com.accela.govxml.GovXMLBusiness.processGovXMLRequest(GovXMLBusiness.java:216)
+	at sun.reflect.GeneratedMethodAccessor657.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at com.accela.v360.controller.ControllerBusiness.executeService(ControllerBusiness.java:68)
+	at com.accela.v360.controller.ControllerTransactionManager.executeService(ControllerTransactionManager.java:63)
+	at com.accela.v360.controller.ControllerLocalEJB.executeService(ControllerLocalEJB.java:117)
+	at com.accela.v360.controller.ControllerLocalEJB.executeServiceForLongTran(ControllerLocalEJB.java:150)
+	at sun.reflect.GeneratedMethodAccessor160.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:112)
+	at org.jboss.ejb3.interceptor.InvocationContextImpl.proceed(InvocationContextImpl.java:166)
+	at org.jboss.ejb3.interceptor.EJB3InterceptorsInterceptor.invoke(EJB3InterceptorsInterceptor.java:63)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.entity.TransactionScopedEntityManagerInterceptor.invoke(TransactionScopedEntityManagerInterceptor.java:54)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.AllowedOperationsInterceptor.invoke(AllowedOperationsInterceptor.java:47)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.aspects.tx.TxPolicy.invokeInOurTx(TxPolicy.java:79)
+	at org.jboss.aspects.tx.TxInterceptor$Required.invoke(TxInterceptor.java:191)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.aspects.tx.TxPropagationInterceptor.invoke(TxPropagationInterceptor.java:95)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.stateless.StatelessInstanceInterceptor.invoke(StatelessInstanceInterceptor.java:62)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.aspects.security.AuthenticationInterceptor.invoke(AuthenticationInterceptor.java:77)
+	at org.jboss.ejb3.security.Ejb3AuthenticationInterceptor.invoke(Ejb3AuthenticationInterceptor.java:110)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.ENCPropagationInterceptor.invoke(ENCPropagationInterceptor.java:46)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.asynchronous.AsynchronousInterceptor.invoke(AsynchronousInterceptor.java:106)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.stateless.StatelessContainer.localInvoke(StatelessContainer.java:240)
+	at org.jboss.ejb3.stateless.StatelessContainer.localInvoke(StatelessContainer.java:210)
+	at org.jboss.ejb3.stateless.StatelessLocalProxy.invoke(StatelessLocalProxy.java:84)
+	at $Proxy191.executeServiceForLongTran(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor159.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springframework.ejb.access.LocalSlsbInvokerInterceptor.invokeInContext(LocalSlsbInvokerInterceptor.java:70)
+	at org.springframework.ejb.access.AbstractSlsbInvokerInterceptor.invoke(AbstractSlsbInvokerInterceptor.java:188)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+	at $Proxy192.executeServiceForLongTran(Unknown Source)
+	at com.accela.aa.util.BusinessHelper$WrapperHandler.invoke(BusinessHelper.java:216)
+	at $Proxy262.processGovXMLRequest(Unknown Source)
+	at com.accela.aa.aaxml.govxml.web.GovXMLServlet2.service(GovXMLServlet2.java:181)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:96)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:182)
+	at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:84)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.jboss.web.tomcat.service.jca.CachedConnectionValve.invoke(CachedConnectionValve.java:157)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:615)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1733)
+	at java.lang.Thread.run(Thread.java:722)
+	&lt;/exception_stack_trace&gt;
+
+&lt;/aa_exception&gt;
+</Detail>
+        </Message>
+        <Message>
+          <Code>-3</Code>
+          <Text>(Script Engine) com.accela.aa.exception.ObjectNotFoundException:Script not found: Server provide code:ADBC, script ID:ContactAddAfter</Text>
+          <Detail>Script Engine did not return an output. Detail:com.accela.aa.exception.ObjectNotFoundException:ContactAddAfter:&lt;aa_exception&gt;
+
+	&lt;exception_id&gt;121128155701896&lt;/exception_id&gt;
+
+	&lt;exception-localized-message&gt;Script not found: Server provide code:ADBC, script ID:ContactAddAfter&lt;/exception-localized-message&gt;
+
+	&lt;exception_stack_trace&gt;
+	&lt;exception-message-keys&gt;
+
+		&lt;exception-message-key&gt;ADBC&lt;exception-message-key&gt;
+
+		&lt;exception-message-key&gt;ContactAddAfter&lt;exception-message-key&gt;
+
+	&lt;/exception-message-keys&gt;
+
+com.accela.aa.exception.ObjectNotFoundException: ScriptNotFoundException
+	at com.accela.aa.emse.emse.ScriptDAOOracle.getScriptByPK(ScriptDAOOracle.java:170)
+	at com.accela.aa.emse.emse.EMSEBusiness.handleScript(EMSEBusiness.java:140)
+	at com.accela.aa.emse.emse.EMSEBusiness.handleEvent(EMSEBusiness.java:346)
+	at com.accela.aa.emse.emse.EMSEBusiness.handleEvent(EMSEBusiness.java:268)
+	at com.accela.aa.emse.emse.EMSEBusiness.handleEventBiz(EMSEBusiness.java:1011)
+	at com.accela.aa.emse.emse.EMSEBusiness.handleEventBiz(EMSEBusiness.java:989)
+	at com.accela.aa.aaxml.govxml.helper.ConvertHelper.processEvent(ConvertHelper.java:3553)
+	at com.accela.aa.aaxml.govxml.helper.CapXML.handleCapContactForMultiLicenses(CapXML.java:5788)
+	at com.accela.aa.aaxml.govxml.helper.CapXML.finalizeCap(CapXML.java:1838)
+	at com.accela.aa.aaxml.govxml.helper.CapXML.initialCap(CapXML.java:742)
+	at com.accela.aa.aaxml.govxml.operations.InitiateCAPOperation.performOperation(InitiateCAPOperation.java:61)
+	at com.accela.aa.aaxml.govxml.operations.GovXMLOperation.execute(GovXMLOperation.java:134)
+	at com.accela.aa.aaxml.govxml.helper.GovXMLHelper.executeGovXML(GovXMLHelper.java:214)
+	at com.accela.govxml.GovXMLBusiness.processGovXML(GovXMLBusiness.java:452)
+	at com.accela.govxml.GovXMLBusiness.processGovXMLRequest(GovXMLBusiness.java:216)
+	at sun.reflect.GeneratedMethodAccessor657.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at com.accela.v360.controller.ControllerBusiness.executeService(ControllerBusiness.java:68)
+	at com.accela.v360.controller.ControllerTransactionManager.executeService(ControllerTransactionManager.java:63)
+	at com.accela.v360.controller.ControllerLocalEJB.executeService(ControllerLocalEJB.java:117)
+	at com.accela.v360.controller.ControllerLocalEJB.executeServiceForLongTran(ControllerLocalEJB.java:150)
+	at sun.reflect.GeneratedMethodAccessor160.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:112)
+	at org.jboss.ejb3.interceptor.InvocationContextImpl.proceed(InvocationContextImpl.java:166)
+	at org.jboss.ejb3.interceptor.EJB3InterceptorsInterceptor.invoke(EJB3InterceptorsInterceptor.java:63)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.entity.TransactionScopedEntityManagerInterceptor.invoke(TransactionScopedEntityManagerInterceptor.java:54)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.AllowedOperationsInterceptor.invoke(AllowedOperationsInterceptor.java:47)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.aspects.tx.TxPolicy.invokeInOurTx(TxPolicy.java:79)
+	at org.jboss.aspects.tx.TxInterceptor$Required.invoke(TxInterceptor.java:191)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.aspects.tx.TxPropagationInterceptor.invoke(TxPropagationInterceptor.java:95)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.stateless.StatelessInstanceInterceptor.invoke(StatelessInstanceInterceptor.java:62)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.aspects.security.AuthenticationInterceptor.invoke(AuthenticationInterceptor.java:77)
+	at org.jboss.ejb3.security.Ejb3AuthenticationInterceptor.invoke(Ejb3AuthenticationInterceptor.java:110)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.ENCPropagationInterceptor.invoke(ENCPropagationInterceptor.java:46)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.asynchronous.AsynchronousInterceptor.invoke(AsynchronousInterceptor.java:106)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:101)
+	at org.jboss.ejb3.stateless.StatelessContainer.localInvoke(StatelessContainer.java:240)
+	at org.jboss.ejb3.stateless.StatelessContainer.localInvoke(StatelessContainer.java:210)
+	at org.jboss.ejb3.stateless.StatelessLocalProxy.invoke(StatelessLocalProxy.java:84)
+	at $Proxy191.executeServiceForLongTran(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor159.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springframework.ejb.access.LocalSlsbInvokerInterceptor.invokeInContext(LocalSlsbInvokerInterceptor.java:70)
+	at org.springframework.ejb.access.AbstractSlsbInvokerInterceptor.invoke(AbstractSlsbInvokerInterceptor.java:188)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+	at $Proxy192.executeServiceForLongTran(Unknown Source)
+	at com.accela.aa.util.BusinessHelper$WrapperHandler.invoke(BusinessHelper.java:216)
+	at $Proxy262.processGovXMLRequest(Unknown Source)
+	at com.accela.aa.aaxml.govxml.web.GovXMLServlet2.service(GovXMLServlet2.java:181)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:96)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:182)
+	at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:84)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.jboss.web.tomcat.service.jca.CachedConnectionValve.invoke(CachedConnectionValve.java:157)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:615)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1733)
+	at java.lang.Thread.run(Thread.java:722)
+	&lt;/exception_stack_trace&gt;
+
+&lt;/aa_exception&gt;
+</Detail>
+        </Message>
+      </Messages>
+      <Error>
+        <ErrorCode>0</ErrorCode>
+      </Error>
+      <LanguageID>en-US</LanguageID>
+    </System>
+    <CAPId>
+      <Keys>
+        <Key>12CAP</Key>
+        <Key>00000</Key>
+        <Key>001QY</Key>
+      </Keys>
+      <IdentifierDisplay>12CAP-00001898</IdentifierDisplay>
+      <TrackingNumber>208561253950</TrackingNumber>
+    </CAPId>
+  </InitiateCAPResponse>
+</GovXML>

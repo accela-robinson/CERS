@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="gb2312"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML">
+	<xsd:element name="GovXML">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CreateDocumentResponse">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="DocumentId">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Keys">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element maxOccurs="unbounded" name="Key" type="xsd:string"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Document">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="DocumentLocators">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="ElectronicFileLocator">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="Keys">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="Key" type="xsd:unsignedInt"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="fileName" type="xsd:string"/>
+																<xsd:element name="fileDateTime" type="xsd:string"/>
+																<xsd:element name="fileSize" type="xsd:decimal"/>
+																<xsd:element name="fileType" type="xsd:string"/>
+																<xsd:element name="serverAddress" type="xsd:string"/>
+																<xsd:element name="serverType" type="xsd:string"/>
+																<xsd:element name="serverVendor" type="xsd:string"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="System">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="XMLVersion" type="xsd:unsignedShort"/>
+										<xsd:element name="ServiceProviderCode" type="xsd:string"/>
+										<xsd:element name="Username" type="xsd:string"/>
+										<xsd:element name="MaxRows" type="xsd:unsignedByte"/>
+										<xsd:element name="StartRow" type="xsd:unsignedByte"/>
+										<xsd:element name="EndRow" type="xsd:unsignedByte"/>
+										<xsd:element name="TotalRows" type="xsd:unsignedByte"/>
+										<xsd:element name="ApplicationState" type="xsd:integer"/>
+										<xsd:element name="Context" type="xsd:string"/>
+										<xsd:element name="LanguageID" type="xsd:string"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xs:schema>

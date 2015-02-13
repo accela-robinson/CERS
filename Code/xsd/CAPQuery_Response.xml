@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<GovXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML">
+  <GetCAPsResponse>
+    <System>
+      <XMLVersion>720</XMLVersion>
+      <ServiceProviderCode>ADBC</ServiceProviderCode>
+      <Username>ADMIN</Username>
+      <MaxRows>50</MaxRows>
+      <StartRow>1</StartRow>
+      <EndRow>1</EndRow>
+      <TotalRows>1</TotalRows>
+      <ApplicationState>89988797742289956517</ApplicationState>
+      <Context>AccelaMobileOffice</Context>
+      <Error>
+        <ErrorCode>0</ErrorCode>
+      </Error>
+      <LanguageID>en-US</LanguageID>
+    </System>
+    <CAPs>
+      <CAP>
+        <globalId  />
+        <ownerHistory  />
+        <Keys>
+          <Key>12CAP</Key>
+          <Key>00000</Key>
+          <Key>001QW</Key>
+        </Keys>
+        <IdentifierDisplay>12CAP-00001896</IdentifierDisplay>
+        <Restricted>0</Restricted>
+        <Type>
+          <Keys>
+            <Key>Licenses</Key>
+            <Key>A</Key>
+            <Key>B</Key>
+            <Key>C</Key>
+          </Keys>
+          <IdentifierDisplay>AA</IdentifierDisplay>
+        </Type>
+        <module>Licenses</module>
+        <FileDate>2012-11-28</FileDate>
+        <Status>
+          <Value>
+          </Value>
+          <Date>2012-11-28</Date>
+          <Keys>
+            <Key>
+            </Key>
+          </Keys>
+        </Status>
+        <Addresses>
+          <CompactAddress>
+            <Keys>
+              <Key>1000186559</Key>
+            </Keys>
+            <addressLines>
+              <String>1212122 1/2 - 121212 1/4 12 12 12 12 - 21 E3 12122 Ave</String>
+              <String>Apt.# 12122 - 1212</String>
+              <String>12122, 2 12122</String>
+            </addressLines>
+            <City>12122</City>
+            <CityIdentifier>
+              <Keys>
+                <Key>12122</Key>
+              </Keys>
+              <IdentifierDisplay>12122</IdentifierDisplay>
+            </CityIdentifier>
+            <State>2</State>
+            <PostalCode>12122</PostalCode>
+            <Country>Australia</Country>
+            <Alias>12122</Alias>
+          </CompactAddress>
+          <DetailAddress isPrimary="true">
+            <Keys>
+              <Key>1000186559</Key>
+            </Keys>
+            <houseNumber>1212122</houseNumber>
+            <houseNumberFraction>1/2</houseNumberFraction>
+            <streetDirection>E3</streetDirection>
+            <streetName>12122</streetName>
+            <streetSuffix>Ave</streetSuffix>
+            <streetSuffixDirection>E3</streetSuffixDirection>
+            <unit>12122</unit>
+            <unitEnd>1212</unitEnd>
+            <unitType>Apt.</unitType>
+            <City>12122</City>
+            <CityIdentifier>
+              <Keys>
+                <Key>12122</Key>
+              </Keys>
+              <IdentifierDisplay>12122</IdentifierDisplay>
+            </CityIdentifier>
+            <State>2</State>
+            <PostalCode>12122</PostalCode>
+            <County>121212</County>
+            <XCoordinate>12.0</XCoordinate>
+            <YCoordinate>12.0</YCoordinate>
+            <sourceFlag>12</sourceFlag>
+            <addressTypeFlag>I</addressTypeFlag>
+            <houseNumberEnd>121212</houseNumberEnd>
+            <houseFractionEnd>1/4</houseFractionEnd>
+            <streetPrefix>12122</streetPrefix>
+            <distance>1212.0</distance>
+            <secondaryRoad>1212</secondaryRoad>
+            <secondaryRoadNumber>1212</secondaryRoadNumber>
+            <inspectionDistrictPrefix>12</inspectionDistrictPrefix>
+            <inspectionDistrict>1212</inspectionDistrict>
+            <neighborhoodPrefix>1212</neighborhoodPrefix>
+            <neighborhood>12</neighborhood>
+            <countryCode>AU</countryCode>
+            <description>1212</description>
+            <fullAddress>12</fullAddress>
+            <houseNumberAlphaStart>12</houseNumberAlphaStart>
+            <houseNumberAlphaEnd>12</houseNumberAlphaEnd>
+            <levelPrefix>12</levelPrefix>
+            <levelNumberStart>12</levelNumberStart>
+            <levelNumberEnd>21</levelNumberEnd>
+            <AuditID>ADMIN</AuditID>
+            <AuditStatus>A</AuditStatus>
+            <AuditDate>2012-11-28</AuditDate>
+            <StateIdentifier>
+              <Keys>
+                <Key>2</Key>
+              </Keys>
+              <IdentifierDisplay>2</IdentifierDisplay>
+            </StateIdentifier>
+            <CountryCodeIdentifier>
+              <Keys>
+                <Key>AU</Key>
+              </Keys>
+              <IdentifierDisplay>AU</IdentifierDisplay>
+            </CountryCodeIdentifier>
+          </DetailAddress>
+        </Addresses>
+        <Parcels>
+          <Parcel>
+            <Keys>
+              <Key>12212</Key>
+            </Keys>
+            <IdentifierDisplay>12212</IdentifierDisplay>
+            <contextType>Daily</contextType>
+            <AdditionalInformation>
+              <AdditionalInformationGroup>
+                <Keys>
+                  <Key>PARCEL</Key>
+                </Keys>
+                <IdentifierDisplay>PARCEL</IdentifierDisplay>
+                <AdditionalInformationSubGroup action="Existing">
+                  <AdditionalItems>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>Land Value</Key>
+                      </Keys>
+                      <IdentifierDisplay>Land Value</IdentifierDisplay>
+                      <DataType>
+                        <type>String</type>
+                      </DataType>
+                      <Name>Land Value</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>Improved Value</Key>
+                      </Keys>
+                      <IdentifierDisplay>Improved Value</IdentifierDisplay>
+                      <DataType>
+                        <type>String</type>
+                      </DataType>
+                      <Name>Improved Value</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>Exempt Value</Key>
+                      </Keys>
+                      <IdentifierDisplay>Exempt Value</IdentifierDisplay>
+                      <DataType>
+                        <type>String</type>
+                      </DataType>
+                      <Name>Exempt Value</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>12212</Key>
+                        <Key>DATE-P</Key>
+                      </Keys>
+                      <IdentifierDisplay>DATE-P</IdentifierDisplay>
+                      <DataType>
+                        <type>Date</type>
+                      </DataType>
+                      <Name>DATE-P</Name>
+                      <Value>2012-08-27</Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>12212</Key>
+                        <Key>DDL-P</Key>
+                      </Keys>
+                      <IdentifierDisplay>DDL-P</IdentifierDisplay>
+                      <DataType>
+                        <type>Enumeration</type>
+                      </DataType>
+                      <Name>DDL-P</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>12212</Key>
+                        <Key>LAND USE</Key>
+                      </Keys>
+                      <IdentifierDisplay>LAND USE</IdentifierDisplay>
+                      <DataType>
+                        <type>Enumeration</type>
+                      </DataType>
+                      <Name>LAND USE</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>12212</Key>
+                        <Key>NO.-P</Key>
+                      </Keys>
+                      <IdentifierDisplay>NO.-P</IdentifierDisplay>
+                      <DataType>
+                        <type>Float</type>
+                      </DataType>
+                      <Name>NO.-P</Name>
+                      <Value>582</Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>12212</Key>
+                        <Key>PROPERTY TYPE</Key>
+                      </Keys>
+                      <IdentifierDisplay>PROPERTY TYPE</IdentifierDisplay>
+                      <DataType>
+                        <type>Enumeration</type>
+                      </DataType>
+                      <Name>PROPERTY TYPE</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>12212</Key>
+                        <Key>RADIO-P</Key>
+                      </Keys>
+                      <IdentifierDisplay>RADIO-P</IdentifierDisplay>
+                      <DataType>
+                        <type>YesNo</type>
+                      </DataType>
+                      <Name>RADIO-P</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>12212</Key>
+                        <Key>STORY HEIGHT (RES. ONLY)</Key>
+                      </Keys>
+                      <IdentifierDisplay>STORY HEIGHT (RES. ONLY)</IdentifierDisplay>
+                      <DataType>
+                        <type>Float</type>
+                      </DataType>
+                      <Name>STORY HEIGHT (RES. ONLY)</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>12212</Key>
+                        <Key>TEXT-P</Key>
+                      </Keys>
+                      <IdentifierDisplay>TEXT-P</IdentifierDisplay>
+                      <DataType>
+                        <type>String</type>
+                      </DataType>
+                      <Name>TEXT-P</Name>
+                      <Value>default in English</Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                  </AdditionalItems>
+                </AdditionalInformationSubGroup>
+              </AdditionalInformationGroup>
+            </AdditionalInformation>
+            <Status>
+              <Keys />
+            </Status>
+            <LegalDescription>
+            </LegalDescription>
+          </Parcel>
+          <Parcel>
+            <Keys>
+              <Key>123123123</Key>
+            </Keys>
+            <IdentifierDisplay>123123123</IdentifierDisplay>
+            <contextType>Daily</contextType>
+            <AdditionalInformation>
+              <AdditionalInformationGroup>
+                <Keys>
+                  <Key>PARCEL</Key>
+                </Keys>
+                <IdentifierDisplay>PARCEL</IdentifierDisplay>
+                <AdditionalInformationSubGroup action="Existing">
+                  <AdditionalItems>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>Land Value</Key>
+                      </Keys>
+                      <IdentifierDisplay>Land Value</IdentifierDisplay>
+                      <DataType>
+                        <type>String</type>
+                      </DataType>
+                      <Name>Land Value</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>Improved Value</Key>
+                      </Keys>
+                      <IdentifierDisplay>Improved Value</IdentifierDisplay>
+                      <DataType>
+                        <type>String</type>
+                      </DataType>
+                      <Name>Improved Value</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>Exempt Value</Key>
+                      </Keys>
+                      <IdentifierDisplay>Exempt Value</IdentifierDisplay>
+                      <DataType>
+                        <type>String</type>
+                      </DataType>
+                      <Name>Exempt Value</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>123123123</Key>
+                        <Key>DATE-P</Key>
+                      </Keys>
+                      <IdentifierDisplay>DATE-P</IdentifierDisplay>
+                      <DataType>
+                        <type>Date</type>
+                      </DataType>
+                      <Name>DATE-P</Name>
+                      <Value>2012-08-27</Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>123123123</Key>
+                        <Key>DDL-P</Key>
+                      </Keys>
+                      <IdentifierDisplay>DDL-P</IdentifierDisplay>
+                      <DataType>
+                        <type>Enumeration</type>
+                      </DataType>
+                      <Name>DDL-P</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>123123123</Key>
+                        <Key>LAND USE</Key>
+                      </Keys>
+                      <IdentifierDisplay>LAND USE</IdentifierDisplay>
+                      <DataType>
+                        <type>Enumeration</type>
+                      </DataType>
+                      <Name>LAND USE</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>123123123</Key>
+                        <Key>NO.-P</Key>
+                      </Keys>
+                      <IdentifierDisplay>NO.-P</IdentifierDisplay>
+                      <DataType>
+                        <type>Float</type>
+                      </DataType>
+                      <Name>NO.-P</Name>
+                      <Value>582</Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>123123123</Key>
+                        <Key>PROPERTY TYPE</Key>
+                      </Keys>
+                      <IdentifierDisplay>PROPERTY TYPE</IdentifierDisplay>
+                      <DataType>
+                        <type>Enumeration</type>
+                      </DataType>
+                      <Name>PROPERTY TYPE</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>123123123</Key>
+                        <Key>RADIO-P</Key>
+                      </Keys>
+                      <IdentifierDisplay>RADIO-P</IdentifierDisplay>
+                      <DataType>
+                        <type>YesNo</type>
+                      </DataType>
+                      <Name>RADIO-P</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>123123123</Key>
+                        <Key>STORY HEIGHT (RES. ONLY)</Key>
+                      </Keys>
+                      <IdentifierDisplay>STORY HEIGHT (RES. ONLY)</IdentifierDisplay>
+                      <DataType>
+                        <type>Float</type>
+                      </DataType>
+                      <Name>STORY HEIGHT (RES. ONLY)</Name>
+                      <Value>
+                      </Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                    <AdditionalItem>
+                      <Keys>
+                        <Key>123123123</Key>
+                        <Key>TEXT-P</Key>
+                      </Keys>
+                      <IdentifierDisplay>TEXT-P</IdentifierDisplay>
+                      <DataType>
+                        <type>String</type>
+                      </DataType>
+                      <Name>TEXT-P</Name>
+                      <Value>default in English</Value>
+                      <drillDown>false</drillDown>
+                    </AdditionalItem>
+                  </AdditionalItems>
+                </AdditionalInformationSubGroup>
+              </AdditionalInformationGroup>
+            </AdditionalInformation>
+            <Status>
+              <Keys />
+            </Status>
+            <LegalDescription>
+            </LegalDescription>
+          </Parcel>
+        </Parcels>
+        <Contacts>
+          <Contact isPrimary="false">
+            <Keys>
+              <Key>60712883</Key>
+              <Key>contact</Key>
+            </Keys>
+            <PersonAndOrganization >
+              <thePerson>
+                <Person >
+                  <fullName>231232</fullName>
+                  <familyName>12312</familyName>
+                  <givenName>1231232</givenName>
+                  <middleNames>
+                    <String>1231232</String>
+                  </middleNames>
+                  <roles>
+                    <ActorRole>
+                      <role>userdefined</role>
+                      <userDefinedRole>Apiary Registrant</userDefinedRole>
+                      <UserDefinedRoleId>
+                        <Keys>
+                          <Key>Apiary Registrant</Key>
+                        </Keys>
+                        <IdentifierDisplay>Apiary Registrant</IdentifierDisplay>
+                      </UserDefinedRoleId>
+                    </ActorRole>
+                  </roles>
+                  <addresses>
+                    <PostalAddress>
+                      <addressLines>
+                        <String>123</String>
+                        <String>1231</String>
+                        <String>23123</String>
+                      </addressLines>
+                      <town>Ajman</town>
+                      <TownId>
+                        <Keys>
+                          <Key>Ajman</Key>
+                        </Keys>
+                        <IdentifierDisplay>Ajman</IdentifierDisplay>
+                      </TownId>
+                      <region>1231</region>
+                      <postalCode>23</postalCode>
+                    </PostalAddress>
+                    <TelecomAddress>
+                      <telephoneNumbers>
+                        <String>123</String>
+                        <String>123</String>
+                      </telephoneNumbers>
+                      <facsimileNumbers>
+                        <String>123</String>
+                      </facsimileNumbers>
+                      <electronicMailAddresses>
+                        <String>123</String>
+                      </electronicMailAddresses>
+                    </TelecomAddress>
+                  </addresses>
+                </Person>
+              </thePerson>
+              <theOrganization>
+                <Organization >
+                  <name>123</name>
+                  <contactBusinessName>123</contactBusinessName>
+                </Organization>
+              </theOrganization>
+            </PersonAndOrganization>
+          </Contact>
+          <Contact isPrimary="false">
+            <Keys>
+              <Key>123</Key>
+              <Key>license</Key>
+            </Keys>
+            <PersonAndOrganization >
+              <thePerson>
+                <Person >
+                  <familyName>1232</familyName>
+                  <givenName>12322</givenName>
+                  <middleNames>
+                    <String>1232</String>
+                  </middleNames>
+                  <roles>
+                    <ActorRole>
+                      <role>userdefined</role>
+                      <UserDefinedRoleId>
+                        <Keys>
+                          <Key>
+                          </Key>
+                        </Keys>
+                      </UserDefinedRoleId>
+                    </ActorRole>
+                  </roles>
+                  <addresses>
+                    <PostalAddress>
+                      <addressLines>
+                        <String>12312</String>
+                        <String>123</String>
+                        <String>123</String>
+                      </addressLines>
+                      <town>Al Fujairah</town>
+                      <TownId>
+                        <Keys>
+                          <Key>Al Fujairah</Key>
+                        </Keys>
+                        <IdentifierDisplay>Al Fujairah</IdentifierDisplay>
+                      </TownId>
+                      <region>123</region>
+                      <postalCode>123</postalCode>
+                    </PostalAddress>
+                    <TelecomAddress>
+                      <telephoneNumbers>
+                        <String>123</String>
+                        <String>123</String>
+                      </telephoneNumbers>
+                      <facsimileNumbers>
+                        <String>123</String>
+                      </facsimileNumbers>
+                      <electronicMailAddresses>
+                        <String>123</String>
+                      </electronicMailAddresses>
+                    </TelecomAddress>
+                  </addresses>
+                </Person>
+              </thePerson>
+              <theOrganization>
+                <Organization >
+                  <name>123</name>
+                </Organization>
+              </theOrganization>
+            </PersonAndOrganization>
+            <Licenses >
+              <License>
+                <licenseType>AWM FLCB</licenseType>
+                <LicenseTypeId>
+                  <Keys>
+                    <Key>AWM FLCB</Key>
+                  </Keys>
+                  <IdentifierDisplay>AWM FLCB</IdentifierDisplay>
+                </LicenseTypeId>
+                <licenseNumber>123</licenseNumber>
+                <issuedDate>2012-11-19</issuedDate>
+                <expirationDate>2012-11-30</expirationDate>
+              </License>
+            </Licenses>
+          </Contact>
+          <Contact isPrimary="false">
+            <Keys>
+              <Key>925055190</Key>
+              <Key>owner</Key>
+            </Keys>
+            <Person >
+              <fullName>AA</fullName>
+              <familyName>DD</familyName>
+              <givenName>AA</givenName>
+              <middleNames>
+                <String>BB</String>
+              </middleNames>
+              <roles>
+                <ActorRole>
+                  <role>userdefined</role>
+                  <userDefinedRole>Owner</userDefinedRole>
+                  <UserDefinedRoleId>
+                    <Keys>
+                      <Key>Owner</Key>
+                    </Keys>
+                    <IdentifierDisplay>Owner</IdentifierDisplay>
+                  </UserDefinedRoleId>
+                </ActorRole>
+              </roles>
+              <addresses>
+                <PostalAddress>
+                  <addressLines>
+                    <String>ADDRESS LINE 1</String>
+                    <String>
+                    </String>
+                    <String>
+                    </String>
+                  </addressLines>
+                  <town>GD</town>
+                  <TownId>
+                    <Keys>
+                      <Key>GD</Key>
+                    </Keys>
+                    <IdentifierDisplay>GD</IdentifierDisplay>
+                  </TownId>
+                  <region>GD</region>
+                </PostalAddress>
+                <TelecomAddress>
+                  <telephoneNumbers>
+                    <String>22222222</String>
+                  </telephoneNumbers>
+                  <facsimileNumbers>
+                    <String>33333333</String>
+                  </facsimileNumbers>
+                </TelecomAddress>
+              </addresses>
+            </Person>
+          </Contact>
+        </Contacts>
+        <CAPDetail>
+          <TotalJobCost>0.0</TotalJobCost>
+        </CAPDetail>
+      </CAP>
+    </CAPs>
+  </GetCAPsResponse>
+</GovXML>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<GovXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML">
+  <CreateDocumentResponse>
+    <DocumentId>
+      <Keys>
+        <Key>12CAP</Key>
+        <Key>00000</Key>
+        <Key>00105</Key>
+        <Key>111589</Key>
+      </Keys>
+    </DocumentId>
+    <Document>
+      <DocumentLocators>
+        <ElectronicFileLocator>
+          <Keys>
+            <Key>111589</Key>
+          </Keys>
+          <fileName>test amo.txt</fileName>
+          <fileDateTime>
+          </fileDateTime>
+          <fileSize>0.0</fileSize>
+          <fileType>ACCELA</fileType>
+          <serverAddress>ACCELA</serverAddress>
+          <serverType>ACCELA</serverType>
+          <serverVendor>ADMIN</serverVendor>
+        </ElectronicFileLocator>
+      </DocumentLocators>
+    </Document>
+    <System>
+      <XMLVersion>720</XMLVersion>
+      <ServiceProviderCode>COSD</ServiceProviderCode>
+      <Username>admin</Username>
+      <MaxRows>50</MaxRows>
+      <StartRow>0</StartRow>
+      <EndRow>0</EndRow>
+      <TotalRows>0</TotalRows>
+      <ApplicationState>35585317606341488365</ApplicationState>
+      <Context>AccelaMobileOffice</Context>
+      <LanguageID>en-US</LanguageID>
+    </System>
+  </CreateDocumentResponse>
+</GovXML>

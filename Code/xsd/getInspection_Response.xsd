@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="gb2312"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML">
+  <xsd:element name="GovXML">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="GetInspectionsResponse">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="System">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="XMLVersion" type="xsd:unsignedShort" />
+                    <xsd:element name="ServiceProviderCode" type="xsd:string" />
+                    <xsd:element name="Username" type="xsd:string" />
+                    <xsd:element name="MaxRows" type="xsd:unsignedByte" />
+                    <xsd:element name="StartRow" type="xsd:unsignedByte" />
+                    <xsd:element name="EndRow" type="xsd:unsignedByte" />
+                    <xsd:element name="TotalRows" type="xsd:unsignedByte" />
+                    <xsd:element name="ApplicationState" type="xsd:integer" />
+                    <xsd:element name="Context" type="xsd:string" />
+                    <xsd:element name="Error">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="ErrorCode" type="xsd:unsignedByte" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="LanguageID" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="InspectionSheets">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="InspectionSheet">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                          <xsd:element name="Inspections">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Inspection">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="globalId" />
+                                      <xsd:element name="ownerHistory" />
+                                      <xsd:element name="Keys">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                      <xsd:element name="contextType" type="xsd:string" />
+                                      <xsd:element name="CAPId">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="Keys">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                            <xsd:element name="TrackingNumber" type="xsd:unsignedLong" />
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="CompactAddress">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="Keys">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="Key" type="xsd:unsignedInt" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="addressLines">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" name="String" type="xsd:string" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="City" type="xsd:unsignedShort" />
+                                            <xsd:element name="CityIdentifier">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="Keys">
+                                                    <xsd:complexType>
+                                                      <xsd:sequence>
+                                                        <xsd:element name="Key" type="xsd:unsignedShort" />
+                                                      </xsd:sequence>
+                                                    </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="IdentifierDisplay" type="xsd:unsignedShort" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="State" type="xsd:unsignedByte" />
+                                            <xsd:element name="PostalCode" type="xsd:unsignedShort" />
+                                            <xsd:element name="Country" type="xsd:string" />
+                                            <xsd:element name="Alias" type="xsd:unsignedShort" />
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="DetailAddress">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="Keys">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="Key" type="xsd:unsignedInt" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="houseNumber" type="xsd:unsignedInt" />
+                                            <xsd:element name="houseNumberFraction" type="xsd:string" />
+                                            <xsd:element name="streetDirection" type="xsd:string" />
+                                            <xsd:element name="streetName" type="xsd:unsignedShort" />
+                                            <xsd:element name="streetSuffix" type="xsd:string" />
+                                            <xsd:element name="streetSuffixDirection" type="xsd:string" />
+                                            <xsd:element name="unit" type="xsd:unsignedShort" />
+                                            <xsd:element name="unitEnd" type="xsd:unsignedShort" />
+                                            <xsd:element name="unitType" type="xsd:string" />
+                                            <xsd:element name="City" type="xsd:unsignedShort" />
+                                            <xsd:element name="CityIdentifier">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="Keys">
+                                                    <xsd:complexType>
+                                                      <xsd:sequence>
+                                                        <xsd:element name="Key" type="xsd:unsignedShort" />
+                                                      </xsd:sequence>
+                                                    </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="IdentifierDisplay" type="xsd:unsignedShort" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="State" type="xsd:unsignedByte" />
+                                            <xsd:element name="PostalCode" type="xsd:unsignedShort" />
+                                            <xsd:element name="County" type="xsd:unsignedInt" />
+                                            <xsd:element name="XCoordinate" type="xsd:decimal" />
+                                            <xsd:element name="YCoordinate" type="xsd:decimal" />
+                                            <xsd:element name="sourceFlag" type="xsd:unsignedByte" />
+                                            <xsd:element name="addressTypeFlag" type="xsd:string" />
+                                            <xsd:element name="houseNumberEnd" type="xsd:unsignedInt" />
+                                            <xsd:element name="houseFractionEnd" type="xsd:string" />
+                                            <xsd:element name="streetPrefix" type="xsd:unsignedShort" />
+                                            <xsd:element name="distance" type="xsd:decimal" />
+                                            <xsd:element name="secondaryRoad" type="xsd:unsignedShort" />
+                                            <xsd:element name="secondaryRoadNumber" type="xsd:unsignedShort" />
+                                            <xsd:element name="inspectionDistrictPrefix" type="xsd:unsignedByte" />
+                                            <xsd:element name="inspectionDistrict" type="xsd:unsignedShort" />
+                                            <xsd:element name="neighborhoodPrefix" type="xsd:unsignedShort" />
+                                            <xsd:element name="neighborhood" type="xsd:unsignedByte" />
+                                            <xsd:element name="countryCode" type="xsd:string" />
+                                            <xsd:element name="description" type="xsd:unsignedShort" />
+                                            <xsd:element name="fullAddress" type="xsd:unsignedByte" />
+                                            <xsd:element name="houseNumberAlphaStart" type="xsd:unsignedByte" />
+                                            <xsd:element name="houseNumberAlphaEnd" type="xsd:unsignedByte" />
+                                            <xsd:element name="levelPrefix" type="xsd:unsignedByte" />
+                                            <xsd:element name="levelNumberStart" type="xsd:unsignedByte" />
+                                            <xsd:element name="levelNumberEnd" type="xsd:unsignedByte" />
+                                            <xsd:element name="AuditID" type="xsd:string" />
+                                            <xsd:element name="AuditStatus" type="xsd:string" />
+                                            <xsd:element name="AuditDate" type="xsd:date" />
+                                            <xsd:element name="StateIdentifier">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="Keys">
+                                                    <xsd:complexType>
+                                                      <xsd:sequence>
+                                                        <xsd:element name="Key" type="xsd:unsignedByte" />
+                                                      </xsd:sequence>
+                                                    </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="IdentifierDisplay" type="xsd:unsignedByte" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="CountryCodeIdentifier">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="Keys">
+                                                    <xsd:complexType>
+                                                      <xsd:sequence>
+                                                        <xsd:element name="Key" type="xsd:string" />
+                                                      </xsd:sequence>
+                                                    </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                          <xsd:attribute name="isPrimary" type="xsd:boolean" use="required" />
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="Type">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="Keys">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="InspectionStatus">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="Value" type="xsd:string" />
+                                            <xsd:element name="Date" type="xsd:string" />
+                                            <xsd:element name="Time" type="xsd:string" />
+                                            <xsd:element name="Keys">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="InspectionDate" type="xsd:date" />
+                                      <xsd:element name="Inspector">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="Keys">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="Key" type="xsd:string" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="Person">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="familyName" type="xsd:string" />
+                                                  <xsd:element name="givenName" type="xsd:string" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="Active" type="xsd:boolean" />
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="RequestPhoneNum" type="xsd:string" />
+                                      <xsd:element name="DistanceAndTimes">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="DistanceAndTime">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="Date" type="xsd:date" />
+                                                  <xsd:element name="LastUpdateDate" type="xsd:date" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="Guidesheets">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="Guidesheet">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="globalId" />
+                                                  <xsd:element name="ownerHistory" />
+                                                  <xsd:element name="Keys">
+                                                    <xsd:complexType>
+                                                      <xsd:sequence>
+                                                        <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string"
+/>
+                                                      </xsd:sequence>
+                                                    </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                  <xsd:element name="contextType" type="xsd:string" />
+                                                  <xsd:element name="Type">
+                                                    <xsd:complexType>
+                                                      <xsd:sequence>
+                                                        <xsd:element name="Keys">
+                                                          <xsd:complexType>
+                                                            <xsd:sequence>
+                                                              <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                                                            </xsd:sequence>
+                                                          </xsd:complexType>
+                                                        </xsd:element>
+                                                        <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                      </xsd:sequence>
+                                                    </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="Date" type="xsd:string" />
+                                                  <xsd:element name="Time" type="xsd:time" />
+                                                  <xsd:element name="Guideitems">
+                                                    <xsd:complexType>
+                                                      <xsd:sequence>
+                                                        <xsd:element maxOccurs="unbounded" name="Guideitem">
+                                                          <xsd:complexType>
+                                                            <xsd:sequence>
+                                                              <xsd:element name="globalId" />
+                                                              <xsd:element name="ownerHistory" />
+                                                              <xsd:element name="Keys">
+                                                                <xsd:complexType>
+                                                                  <xsd:sequence>
+                                                                    <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                                                                  </xsd:sequence>
+                                                                </xsd:complexType>
+                                                              </xsd:element>
+                                                              <xsd:element name="IdentifierDisplay" type="xsd:unsignedShort" />
+                                                              <xsd:element name="contextType" type="xsd:string" />
+                                                              <xsd:element name="Description" type="xsd:string" />
+                                                              <xsd:element name="DescriptionEnumeration">
+                                                                <xsd:complexType>
+                                                                  <xsd:sequence>
+                                                                    <xsd:element name="Keys">
+                                                                      <xsd:complexType>
+                                                                        <xsd:sequence>
+                                                                          <xsd:element name="Key" type="xsd:string" />
+                                                                        </xsd:sequence>
+                                                                      </xsd:complexType>
+                                                                    </xsd:element>
+                                                                    <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                                  </xsd:sequence>
+                                                                </xsd:complexType>
+                                                              </xsd:element>
+                                                              <xsd:element name="Date" type="xsd:date" />
+                                                              <xsd:element name="Time" type="xsd:time" />
+                                                              <xsd:element name="DataType">
+                                                                <xsd:complexType>
+                                                                  <xsd:sequence>
+                                                                    <xsd:element name="type" type="xsd:string" />
+                                                                  </xsd:sequence>
+                                                                </xsd:complexType>
+                                                              </xsd:element>
+                                                              <xsd:element name="Value" type="xsd:unsignedByte" />
+                                                              <xsd:element name="Text" type="xsd:string" />
+                                                              <xsd:element name="applicability" type="xsd:string" />
+                                                              <xsd:element name="Status">
+                                                                <xsd:complexType>
+                                                                  <xsd:sequence>
+                                                                    <xsd:element name="Keys">
+                                                                      <xsd:complexType>
+                                                                        <xsd:sequence>
+                                                                          <xsd:element name="Key" type="xsd:string" />
+                                                                        </xsd:sequence>
+                                                                      </xsd:complexType>
+                                                                    </xsd:element>
+                                                                    <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                                    <xsd:element name="EnumerationType" type="xsd:string" />
+                                                                  </xsd:sequence>
+                                                                </xsd:complexType>
+                                                              </xsd:element>
+                                                              <xsd:element name="StatusEnumerationListId" type="xsd:string" />
+                                                              <xsd:element name="applicabilityEnumerationListId" type="xsd:string" />
+                                                              <xsd:element name="violationCode" type="xsd:string" />
+                                                              <xsd:element name="class" type="xsd:string" />
+                                                              <xsd:element name="carryOverFlag" type="xsd:string" />
+                                                              <xsd:element name="AdditionalInformation">
+                                                                <xsd:complexType>
+                                                                  <xsd:sequence>
+                                                                    <xsd:element maxOccurs="unbounded" name="AdditionalInformationGroup">
+                                                                      <xsd:complexType>
+                                                                        <xsd:sequence>
+                                                                          <xsd:element name="Keys">
+                                                                            <xsd:complexType>
+                                                                              <xsd:sequence>
+                                                                                <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                                                                              </xsd:sequence>
+                                                                            </xsd:complexType>
+                                                                          </xsd:element>
+                                                                          <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                                          <xsd:element minOccurs="0" name="addRemoveSubGroups" type="xsd:boolean" />
+                                                                          <xsd:element maxOccurs="unbounded" name="AdditionalInformationSubGroup">
+                                                                            <xsd:complexType>
+                                                                              <xsd:sequence>
+                                                                                <xsd:element name="Keys">
+                                                                                  <xsd:complexType>
+                                                                                    <xsd:sequence>
+                                                                                      <xsd:element name="Key" type="xsd:string" />
+                                                                                    </xsd:sequence>
+                                                                                  </xsd:complexType>
+                                                                                </xsd:element>
+                                                                                <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                                                <xsd:element name="AdditionalItems">
+                                                                                  <xsd:complexType>
+                                                                                    <xsd:sequence>
+                                                                                      <xsd:element maxOccurs="unbounded" name="AdditionalItem">
+                                                                                        <xsd:complexType>
+                                                                                          <xsd:sequence>
+                                                                                            <xsd:element name="Keys">
+                                                                                              <xsd:complexType>
+                                                                                                <xsd:sequence>
+                                                                                                  <xsd:element name="Key" type="xsd:string" />
+                                                                                                </xsd:sequence>
+                                                                                              </xsd:complexType>
+                                                                                            </xsd:element>
+                                                                                            <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                                                            <xsd:element name="DataType">
+                                                                                              <xsd:complexType>
+                                                                                                <xsd:sequence>
+                                                                                                  <xsd:element name="type" type="xsd:string" />
+                                                                                                  <xsd:element minOccurs="0" name="enumeration">
+                                                                                                    <xsd:complexType>
+                                                                                                      <xsd:sequence>
+                                                                                                        <xsd:element maxOccurs="unbounded" name="String" type="xsd:string" />
+                                                                                                      </xsd:sequence>
+                                                                                                    </xsd:complexType>
+                                                                                                  </xsd:element>
+                                                                                                  <xsd:element name="inputRange">
+                                                                                                    <xsd:complexType>
+                                                                                                      <xsd:sequence>
+                                                                                                        <xsd:element minOccurs="0" name="minValue" type="xsd:decimal" />
+                                                                                                        <xsd:element name="maxValue" type="xsd:double" />
+                                                                                                      </xsd:sequence>
+                                                                                                    </xsd:complexType>
+                                                                                                  </xsd:element>
+                                                                                                  <xsd:element minOccurs="0" name="readOnly" type="xsd:boolean" />
+                                                                                                  <xsd:element minOccurs="0" name="Enumerations">
+                                                                                                    <xsd:complexType>
+                                                                                                      <xsd:sequence>
+                                                                                                        <xsd:element maxOccurs="unbounded" name="Enumeration">
+                                                                                                          <xsd:complexType>
+                                                                                                            <xsd:sequence>
+                                                                                                              <xsd:element name="Keys">
+                                                                                                                <xsd:complexType>
+                                                                                                                  <xsd:sequence>
+                                                                                                                    <xsd:element name="Key" type="xsd:string" />
+                                                                                                                  </xsd:sequence>
+                                                                                                                </xsd:complexType>
+                                                                                                              </xsd:element>
+                                                                                                              <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                                                                            </xsd:sequence>
+                                                                                                          </xsd:complexType>
+                                                                                                        </xsd:element>
+                                                                                                      </xsd:sequence>
+                                                                                                    </xsd:complexType>
+                                                                                                  </xsd:element>
+                                                                                                  <xsd:element name="inputRequired" type="xsd:boolean" />
+                                                                                                  <xsd:element name="fieldType" type="xsd:string" />
+                                                                                                </xsd:sequence>
+                                                                                              </xsd:complexType>
+                                                                                            </xsd:element>
+                                                                                            <xsd:element name="Name" type="xsd:string" />
+                                                                                            <xsd:element name="Value" type="xsd:string" />
+                                                                                            <xsd:element name="security" type="xsd:string" />
+                                                                                            <xsd:element name="drillDown" type="xsd:boolean" />
+                                                                                          </xsd:sequence>
+                                                                                        </xsd:complexType>
+                                                                                      </xsd:element>
+                                                                                    </xsd:sequence>
+                                                                                  </xsd:complexType>
+                                                                                </xsd:element>
+                                                                                <xsd:element name="security" type="xsd:string" />
+                                                                              </xsd:sequence>
+                                                                              <xsd:attribute name="action" type="xsd:string" use="required" />
+                                                                              <xsd:attribute name="type" type="xsd:string" use="optional" />
+                                                                            </xsd:complexType>
+                                                                          </xsd:element>
+                                                                          <xsd:element name="security" type="xsd:string" />
+                                                                        </xsd:sequence>
+                                                                      </xsd:complexType>
+                                                                    </xsd:element>
+                                                                  </xsd:sequence>
+                                                                </xsd:complexType>
+                                                              </xsd:element>
+                                                              <xsd:element name="critical" type="xsd:string" />
+                                                            </xsd:sequence>
+                                                          </xsd:complexType>
+                                                        </xsd:element>
+                                                      </xsd:sequence>
+                                                    </xsd:complexType>
+                                                  </xsd:element>
+                                                  <xsd:element name="RecordedBy" type="xsd:string" />
+                                                  <xsd:element name="EnumerationLists">
+                                                    <xsd:complexType>
+                                                      <xsd:sequence>
+                                                        <xsd:element maxOccurs="unbounded" name="EnumerationList">
+                                                          <xsd:complexType>
+                                                            <xsd:sequence>
+                                                              <xsd:element name="id" type="xsd:string" />
+                                                              <xsd:element name="enumeration">
+                                                                <xsd:complexType>
+                                                                  <xsd:sequence>
+                                                                    <xsd:element maxOccurs="unbounded" name="String" type="xsd:string" />
+                                                                  </xsd:sequence>
+                                                                </xsd:complexType>
+                                                              </xsd:element>
+                                                              <xsd:element name="Enumerations">
+                                                                <xsd:complexType>
+                                                                  <xsd:sequence>
+                                                                    <xsd:element maxOccurs="unbounded" name="Enumeration">
+                                                                      <xsd:complexType>
+                                                                        <xsd:sequence>
+                                                                          <xsd:element name="Keys">
+                                                                            <xsd:complexType>
+                                                                              <xsd:sequence>
+                                                                                <xsd:element name="Key" type="xsd:string" />
+                                                                              </xsd:sequence>
+                                                                            </xsd:complexType>
+                                                                          </xsd:element>
+                                                                          <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                                          <xsd:element name="EnumerationType" type="xsd:string" />
+                                                                          <xsd:element name="EnumerationLinkData">
+                                                                            <xsd:complexType>
+                                                                              <xsd:sequence>
+                                                                                <xsd:element name="nonCriticalScore" type="xsd:unsignedByte" />
+                                                                                <xsd:element name="majorViolation" type="xsd:string" />
+                                                                                <xsd:element name="criticalScore" type="xsd:unsignedByte" />
+                                                                              </xsd:sequence>
+                                                                            </xsd:complexType>
+                                                                          </xsd:element>
+                                                                        </xsd:sequence>
+                                                                      </xsd:complexType>
+                                                                    </xsd:element>
+                                                                  </xsd:sequence>
+                                                                </xsd:complexType>
+                                                              </xsd:element>
+                                                            </xsd:sequence>
+                                                          </xsd:complexType>
+                                                        </xsd:element>
+                                                      </xsd:sequence>
+                                                    </xsd:complexType>
+                                                  </xsd:element>
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="SpatialDescriptors">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="GPSReference" />
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="RecordedBy" type="xsd:string" />
+                                      <xsd:element name="autoAssign" type="xsd:boolean" />
+                                      <xsd:element name="GISObjects" />
+                                      <xsd:element name="overTime" type="xsd:string" />
+                                      <xsd:element name="inspBillable" type="xsd:string" />
+                                      <xsd:element name="confirmationNumber" type="xsd:unsignedInt" />
+                                      <xsd:element name="guideSheetSecurity" type="xsd:string" />
+                                      <xsd:element name="InspectionRelations" />
+                                      <xsd:element name="Department">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="Keys">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                            <xsd:element name="agencyCode" type="xsd:string" />
+                                            <xsd:element name="bureauCode" type="xsd:string" />
+                                            <xsd:element name="divisionCode" type="xsd:string" />
+                                            <xsd:element name="sectionCode" type="xsd:string" />
+                                            <xsd:element name="groupCode" type="xsd:string" />
+                                            <xsd:element name="subgroupCode" type="xsd:string" />
+                                            <xsd:element name="subgroupCodeDesc" type="xsd:string" />
+                                            <xsd:element name="Staff">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="StaffPerson">
+                                                    <xsd:complexType>
+                                                      <xsd:sequence>
+                                                        <xsd:element name="Keys">
+                                                          <xsd:complexType>
+                                                            <xsd:sequence>
+                                                              <xsd:element name="Key" type="xsd:string" />
+                                                            </xsd:sequence>
+                                                          </xsd:complexType>
+                                                        </xsd:element>
+                                                        <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                                                        <xsd:element name="firstName" type="xsd:string" />
+                                                        <xsd:element name="lastName" type="xsd:string" />
+                                                        <xsd:element name="auditStatus" type="xsd:string" />
+                                                        <xsd:element name="serviceProviderCode" type="xsd:string" />
+                                                        <xsd:element name="userID" type="xsd:string" />
+                                                        <xsd:element name="agencyCode" type="xsd:string" />
+                                                        <xsd:element name="bureauCode" type="xsd:string" />
+                                                        <xsd:element name="divisionCode" type="xsd:string" />
+                                                        <xsd:element name="sectionCode" type="xsd:string" />
+                                                        <xsd:element name="groupCode" type="xsd:string" />
+                                                        <xsd:element name="officeCode" type="xsd:string" />
+                                                      </xsd:sequence>
+                                                    </xsd:complexType>
+                                                  </xsd:element>
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="isDisplayCommentInACA" type="xsd:string" />
+                                      <xsd:element name="UserRolePrivilege">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="allAcaUserAllowed" type="xsd:boolean" />
+                                            <xsd:element name="capCreatorAllowed" type="xsd:boolean" />
+                                            <xsd:element name="licenseProfessionalAllowed" type="xsd:boolean" />
+                                            <xsd:element name="contactAllowed" type="xsd:boolean" />
+                                            <xsd:element name="ownerAllowed" type="xsd:boolean" />
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="inspectionTypeSecurity" type="xsd:string" />
+                                      <xsd:element name="inspectionContactNumber" type="xsd:string" />
+                                      <xsd:element name="lhsTypeScore" type="xsd:unsignedShort" />
+                                      <xsd:element name="totalGuideSheetScore" type="xsd:unsignedShort" />
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="CAPs">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="CAP">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Keys">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element maxOccurs="unbounded" name="Key" type="xsd:string" />
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="IdentifierDisplay" type="xsd:string" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xs:schema>

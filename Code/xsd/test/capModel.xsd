@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="activity">
+    <xs:sequence>
+      <xs:element name="action" type="xs:string" minOccurs="0"/>
+      <xs:element name="activitiesNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="additionalInformation" type="additionalInformation" minOccurs="0"/>
+      <xs:element name="assignedTo" type="department" minOccurs="0"/>
+      <xs:element name="capId" type="capId" minOccurs="0"/>
+      <xs:element name="date" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="internalOnly" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="type" type="activityType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="additionalInformation">
+    <xs:sequence>
+      <xs:element name="additionalInformationGroup" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="department">
+    <xs:sequence>
+      <xs:element name="agencyCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="bureauCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="divisionCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="groupCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="officeCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="sectionCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="staff" type="staff" minOccurs="0"/>
+      <xs:element name="subGroupCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="subGroupDesc" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="keys">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="staff">
+    <xs:sequence>
+      <xs:element name="staffPersons" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capId">
+    <xs:sequence>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="trackingNumber" type="xs:long"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="activityType">
+    <xs:sequence>
+      <xs:element name="additionInformationGroupIds" type="additionalInformationGroupIds" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="additionalInformationGroupIds">
+    <xs:sequence>
+      <xs:element name="additionalInformationGroupIds" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="activitys">
+    <xs:sequence>
+      <xs:element name="activitys" type="activity" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="activitySummary">
+    <xs:sequence>
+      <xs:element name="activitiesNumber" type="xs:long" minOccurs="0"/>
+      <xs:element name="assignedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="assignedTo" type="xs:string" minOccurs="0"/>
+      <xs:element name="capId" type="capId" minOccurs="0"/>
+      <xs:element name="dueDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="statusDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="taskStatus" type="xs:string" minOccurs="0"/>
+      <xs:element name="type" type="activityType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="activitySummarys">
+    <xs:sequence>
+      <xs:element name="activitySummarys" type="activitySummary" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="associateCAPs">
+    <xs:sequence>
+      <xs:element name="CAPIds" type="capIds" minOccurs="0"/>
+      <xs:element name="CAPs" type="caPs" minOccurs="0"/>
+      <xs:element name="contextType" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capIds">
+    <xs:sequence>
+      <xs:element name="CAPIds" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="caPs">
+    <xs:sequence>
+      <xs:element name="CAPs" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cap">
+    <xs:sequence>
+      <xs:element name="activitySummarys" type="activitySummarys" minOccurs="0"/>
+      <xs:element name="activitys" type="activitys" minOccurs="0"/>
+      <xs:element name="additionalInformation" type="additionalInformation" minOccurs="0"/>
+      <xs:element name="addresses" type="addresses" minOccurs="0"/>
+      <xs:element name="applicationTypeEntitySecurity" type="entities" minOccurs="0"/>
+      <xs:element name="applicationTypeSecurity" type="xs:string" minOccurs="0"/>
+      <xs:element name="assets" type="assets" minOccurs="0"/>
+      <xs:element name="CAPDetail" type="capDetail" minOccurs="0"/>
+      <xs:element name="CAPRelationGroups" type="capRelationGroups" minOccurs="0"/>
+      <xs:element name="CAPRelations" type="capRelations" minOccurs="0"/>
+      <xs:element name="capConditionImpactCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="checkList" type="checkList" minOccurs="0"/>
+      <xs:element name="comments" type="comments" minOccurs="0"/>
+      <xs:element name="compactAddresses" type="compactAddresses" minOccurs="0"/>
+      <xs:element name="conditions" type="conditions" minOccurs="0"/>
+      <xs:element name="contacts" type="contacts" minOccurs="0"/>
+      <xs:element name="contextType" type="xs:string" minOccurs="0"/>
+      <xs:element name="costItems" type="costItems" minOccurs="0"/>
+      <xs:element name="department" type="department" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="detailAddress" type="detailAddress" minOccurs="0"/>
+      <xs:element name="dispositions" type="dispositions" minOccurs="0"/>
+      <xs:element name="eixstRefContact" type="xs:boolean"/>
+      <xs:element name="existRefAddress" type="xs:boolean"/>
+      <xs:element name="existRefAsset" type="xs:boolean"/>
+      <xs:element name="existRefLp" type="xs:boolean"/>
+      <xs:element name="existRefOwner" type="xs:boolean"/>
+      <xs:element name="existRefParcel" type="xs:boolean"/>
+      <xs:element name="expiration" type="expiration" minOccurs="0"/>
+      <xs:element name="fileDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="GISObjects" type="gisObjects" minOccurs="0"/>
+      <xs:element name="globalId" type="globalId" minOccurs="0"/>
+      <xs:element name="holds" type="holds" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="inspections" type="inspections" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="module" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="options" type="options" minOccurs="0"/>
+      <xs:element name="ownerHistory" type="ownerHistory" minOccurs="0"/>
+      <xs:element name="parcels" type="parcels" minOccurs="0"/>
+      <xs:element name="parts" type="parts" minOccurs="0"/>
+      <xs:element name="restricted" type="xs:string" minOccurs="0"/>
+      <xs:element name="scheduleDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="scheduleTime" type="xs:string" minOccurs="0"/>
+      <xs:element name="spatialDescriptors" type="spatialDescriptors" minOccurs="0"/>
+      <xs:element name="spatialObjects" type="spatialObjects" minOccurs="0"/>
+      <xs:element name="staffPerson" type="staffPerson" minOccurs="0"/>
+      <xs:element name="status" type="capStatus" minOccurs="0"/>
+      <xs:element name="type" type="type" minOccurs="0"/>
+      <xs:element name="workOrderTasks" type="workOrderTasks" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addresses">
+    <xs:sequence>
+      <xs:element name="compactAddress" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="detailAddresses" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="entities">
+    <xs:sequence>
+      <xs:element name="entities" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="assets">
+    <xs:sequence>
+      <xs:element name="assets" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capDetail">
+    <xs:sequence>
+      <xs:element name="asgnDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="asgnDept" type="xs:string" minOccurs="0"/>
+      <xs:element name="asgnStaff" type="xs:string" minOccurs="0"/>
+      <xs:element name="assignedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="closedBy" type="xs:string" minOccurs="0"/>
+      <xs:element name="closedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="closedDept" type="xs:string" minOccurs="0"/>
+      <xs:element name="completeDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="completeDept" type="xs:string" minOccurs="0"/>
+      <xs:element name="completeStaff" type="xs:string" minOccurs="0"/>
+      <xs:element name="department" type="department" minOccurs="0"/>
+      <xs:element name="pmScheduleSeq" type="xs:long" minOccurs="0"/>
+      <xs:element name="priority" type="xs:string" minOccurs="0"/>
+      <xs:element name="scheduledDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="scheduledTime" type="xs:string" minOccurs="0"/>
+      <xs:element name="staffPerson" type="staffPerson" minOccurs="0"/>
+      <xs:element name="totalJobCost" type="xs:double" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="staffPerson">
+    <xs:sequence>
+      <xs:element name="agencyCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="auditStatus" type="xs:string" minOccurs="0"/>
+      <xs:element name="bureauCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="divisionCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+      <xs:element name="fullName" type="xs:string" minOccurs="0"/>
+      <xs:element name="groupCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+      <xs:element name="officeCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="sectionCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="serviceProviderCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="userID" type="xs:string" minOccurs="0"/>
+      <xs:element name="userStatus" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capRelationGroups">
+    <xs:sequence>
+      <xs:element name="CAPRelationGroups" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capRelations">
+    <xs:sequence>
+      <xs:element name="CAPRelation" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkList">
+    <xs:sequence>
+      <xs:element name="checkItems" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="options" type="options" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="options">
+    <xs:sequence>
+      <xs:element name="options" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="comments">
+    <xs:sequence>
+      <xs:element name="commentList" type="comment" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="comment">
+    <xs:sequence>
+      <xs:element name="action" type="xs:string" minOccurs="0"/>
+      <xs:element name="capId" type="capId" minOccurs="0"/>
+      <xs:element name="comments" type="xs:string" minOccurs="0"/>
+      <xs:element name="date" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="showOnInspection" type="xs:string" minOccurs="0"/>
+      <xs:element name="userID" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="compactAddresses">
+    <xs:sequence>
+      <xs:element name="compactAddresses" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="conditions">
+    <xs:sequence>
+      <xs:element name="conditions" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="contacts">
+    <xs:sequence>
+      <xs:element name="contacts" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="costItems">
+    <xs:sequence>
+      <xs:element name="costItems" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="detailAddress">
+    <xs:sequence>
+      <xs:element name="action" type="xs:string" minOccurs="0"/>
+      <xs:element name="addressFormat" type="xs:string" minOccurs="0"/>
+      <xs:element name="addressTypeFlag" type="xs:string" minOccurs="0"/>
+      <xs:element name="alias" type="xs:string" minOccurs="0"/>
+      <xs:element name="auditDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="auditID" type="xs:string" minOccurs="0"/>
+      <xs:element name="auditStatus" type="xs:string" minOccurs="0"/>
+      <xs:element name="city" type="xs:string" minOccurs="0"/>
+      <xs:element name="cityIdentifier" type="identifier" minOccurs="0"/>
+      <xs:element name="country" type="xs:string" minOccurs="0"/>
+      <xs:element name="countryCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="county" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="distance" type="xs:string" minOccurs="0"/>
+      <xs:element name="eventID" type="xs:string" minOccurs="0"/>
+      <xs:element name="fullAddress" type="xs:string" minOccurs="0"/>
+      <xs:element name="GISObjects" type="gisObjects" minOccurs="0"/>
+      <xs:element name="houseFractionEnd" type="xs:string" minOccurs="0"/>
+      <xs:element name="houseNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="houseNumberAlphaEnd" type="xs:string" minOccurs="0"/>
+      <xs:element name="houseNumberAlphaStart" type="xs:string" minOccurs="0"/>
+      <xs:element name="houseNumberEnd" type="xs:string" minOccurs="0"/>
+      <xs:element name="houseNumberFraction" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="inspectionDistrict" type="xs:string" minOccurs="0"/>
+      <xs:element name="inspectionDistrictPrefix" type="xs:string" minOccurs="0"/>
+      <xs:element name="isPrimary" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="levelNumberEnd" type="xs:string" minOccurs="0"/>
+      <xs:element name="levelNumberStart" type="xs:string" minOccurs="0"/>
+      <xs:element name="levelPrefix" type="xs:string" minOccurs="0"/>
+      <xs:element name="line1" type="xs:string" minOccurs="0"/>
+      <xs:element name="line2" type="xs:string" minOccurs="0"/>
+      <xs:element name="neighberhoodPrefix" type="xs:string" minOccurs="0"/>
+      <xs:element name="neighborhood" type="xs:string" minOccurs="0"/>
+      <xs:element name="neighborhoodPrefix" type="xs:string" minOccurs="0"/>
+      <xs:element name="parcelIds" type="parcelIds" minOccurs="0"/>
+      <xs:element name="postalCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="referenceAddressType" type="xs:string" minOccurs="0"/>
+      <xs:element name="secondaryRoad" type="xs:string" minOccurs="0"/>
+      <xs:element name="secondaryRoadNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="sourceFlag" type="xs:string" minOccurs="0"/>
+      <xs:element name="sourceNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="state" type="xs:string" minOccurs="0"/>
+      <xs:element name="status" type="xs:string" minOccurs="0"/>
+      <xs:element name="streetDirection" type="xs:string" minOccurs="0"/>
+      <xs:element name="streetName" type="xs:string" minOccurs="0"/>
+      <xs:element name="streetPrefix" type="xs:string" minOccurs="0"/>
+      <xs:element name="streetSuffix" type="xs:string" minOccurs="0"/>
+      <xs:element name="streetSuffixDirection" type="xs:string" minOccurs="0"/>
+      <xs:element name="templateFields" type="templateFields" minOccurs="0"/>
+      <xs:element name="uid" type="xs:string" minOccurs="0"/>
+      <xs:element name="unit" type="xs:string" minOccurs="0"/>
+      <xs:element name="unitEnd" type="xs:string" minOccurs="0"/>
+      <xs:element name="unitType" type="xs:string" minOccurs="0"/>
+      <xs:element name="urbanization" type="xs:string" minOccurs="0"/>
+      <xs:element name="XCoordinate" type="xs:double" minOccurs="0"/>
+      <xs:element name="YCoordinate" type="xs:double" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="identifier">
+    <xs:sequence>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="gisObjects">
+    <xs:sequence>
+      <xs:element name="elementCount" type="xs:int" minOccurs="0"/>
+      <xs:element name="GISObject" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parcelIds">
+    <xs:sequence>
+      <xs:element name="parcelIds" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="templateFields">
+    <xs:sequence>
+      <xs:element name="templateFields" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="dispositions">
+    <xs:sequence>
+      <xs:element name="dispositions" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="expiration">
+    <xs:sequence>
+      <xs:element name="date" type="xs:string" minOccurs="0"/>
+      <xs:element name="expirationStatus" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="globalId">
+    <xs:sequence>
+      <xs:element name="string" type="xs:string" minOccurs="0"/>
+      <xs:element name="xmlns" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="holds">
+    <xs:sequence>
+      <xs:element name="hold" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="inspections">
+    <xs:sequence>
+      <xs:element name="inspection" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ownerHistory">
+    <xs:sequence>
+      <xs:element name="changeAction" type="xs:string" minOccurs="0"/>
+      <xs:element name="creationDate" type="xs:long" minOccurs="0"/>
+      <xs:element name="lastModifiedDate" type="xs:long" minOccurs="0"/>
+      <xs:element name="lastModifyingApplication" type="application" minOccurs="0"/>
+      <xs:element name="lastModifyingUser" type="personAndOrganization" minOccurs="0"/>
+      <xs:element name="owningApplication" type="application" minOccurs="0"/>
+      <xs:element name="owningUser" type="personAndOrganization" minOccurs="0"/>
+      <xs:element name="state" type="xs:string" minOccurs="0"/>
+      <xs:element name="xmlns" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="application">
+    <xs:sequence>
+      <xs:element name="applicationDeveloper" type="xs:string" minOccurs="0"/>
+      <xs:element name="applicationFullName" type="xs:string" minOccurs="0"/>
+      <xs:element name="applicationIdentifier" type="xs:string" minOccurs="0"/>
+      <xs:element name="version" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personAndOrganization">
+    <xs:sequence>
+      <xs:element name="roles" type="roles" minOccurs="0"/>
+      <xs:element name="theOrganization" type="theOrganization" minOccurs="0"/>
+      <xs:element name="thePerson" type="thePerson" minOccurs="0"/>
+      <xs:element name="xmlns" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="roles">
+    <xs:sequence>
+      <xs:element name="actorRoles" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="elementCount" type="xs:int" minOccurs="0"/>
+      <xs:element name="roleEnumerations" type="enumerations" minOccurs="0"/>
+      <xs:element name="roles" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="enumerations">
+    <xs:sequence>
+      <xs:element name="enumerations" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="theOrganization">
+    <xs:sequence>
+      <xs:element name="organization" type="organization" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="organization">
+    <xs:sequence>
+      <xs:element name="addresses" type="addresses1" minOccurs="0"/>
+      <xs:element name="contactBusinessName" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="roles" type="roles" minOccurs="0"/>
+      <xs:element name="xmlns" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addresses1">
+    <xs:sequence>
+      <xs:element name="postalAddresses" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="telecomAddress" type="telecomAddress" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="telecomAddress">
+    <xs:sequence>
+      <xs:element name="electronicMailAddresses" type="electronicMailAddresses" minOccurs="0"/>
+      <xs:element name="facsimileNumbers" type="facsimileNumbers" minOccurs="0"/>
+      <xs:element name="pagerNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="telephoneNumbers" type="telephoneNumbers" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="electronicMailAddresses">
+    <xs:sequence>
+      <xs:element name="string" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="facsimileNumbers">
+    <xs:sequence>
+      <xs:element name="string" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="telephoneNumbers">
+    <xs:sequence>
+      <xs:element name="string" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="thePerson">
+    <xs:sequence>
+      <xs:element name="person" type="person" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="person">
+    <xs:sequence>
+      <xs:element name="addresses" type="addresses1" minOccurs="0"/>
+      <xs:element name="birthDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="busName2" type="xs:string" minOccurs="0"/>
+      <xs:element name="countryCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="familyName" type="xs:string" minOccurs="0"/>
+      <xs:element name="fullName" type="xs:string" minOccurs="0"/>
+      <xs:element name="gender" type="xs:string" minOccurs="0"/>
+      <xs:element name="givenName" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="mailingAddress" type="postalAddress" minOccurs="0"/>
+      <xs:element name="middleNames" type="middleNames" minOccurs="0"/>
+      <xs:element name="ownerAddress" type="postalAddress" minOccurs="0"/>
+      <xs:element name="ownerTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="ownerType" type="xs:string" minOccurs="0"/>
+      <xs:element name="postOfficeBox" type="xs:string" minOccurs="0"/>
+      <xs:element name="prefixTitles" type="middleNames" minOccurs="0"/>
+      <xs:element name="roles" type="roles" minOccurs="0"/>
+      <xs:element name="salutation" type="xs:string" minOccurs="0"/>
+      <xs:element name="suffixTitles" type="middleNames" minOccurs="0"/>
+      <xs:element name="xmlns" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="postalAddress">
+    <xs:sequence>
+      <xs:element name="addressLines" type="addressLines" minOccurs="0"/>
+      <xs:element name="country" type="xs:string" minOccurs="0"/>
+      <xs:element name="internalLocation" type="xs:string" minOccurs="0"/>
+      <xs:element name="postalBox" type="xs:string" minOccurs="0"/>
+      <xs:element name="postalCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="region" type="xs:string" minOccurs="0"/>
+      <xs:element name="town" type="xs:string" minOccurs="0"/>
+      <xs:element name="townId" type="identifier" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addressLines">
+    <xs:sequence>
+      <xs:element name="string" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="middleNames">
+    <xs:sequence>
+      <xs:element name="middleName" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parcels">
+    <xs:sequence>
+      <xs:element name="parcels" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parts">
+    <xs:sequence>
+      <xs:element name="parts" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="spatialDescriptors">
+    <xs:sequence>
+      <xs:element name="bookPageParcel" type="bookPageParcel" minOccurs="0"/>
+      <xs:element name="GISLineSegment" type="gisLineSegment" minOccurs="0"/>
+      <xs:element name="GISReference" type="gisReference" minOccurs="0"/>
+      <xs:element name="GPSReference" type="gpsReference" minOccurs="0"/>
+      <xs:element name="legalDescription" type="legalDescription" minOccurs="0"/>
+      <xs:element name="mapReference" type="mapReference" minOccurs="0"/>
+      <xs:element name="pin" type="pin" minOccurs="0"/>
+      <xs:element name="plss" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bookPageParcel">
+    <xs:sequence>
+      <xs:element name="book" type="xs:string" minOccurs="0"/>
+      <xs:element name="page" type="xs:string" minOccurs="0"/>
+      <xs:element name="parcel" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="gisLineSegment">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="gisReference">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="gpsReference">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="elevation" type="xs:float" minOccurs="0"/>
+      <xs:element name="latitude" type="xs:float" minOccurs="0"/>
+      <xs:element name="longitude" type="xs:float" minOccurs="0"/>
+      <xs:element name="source" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalDescription">
+    <xs:sequence>
+      <xs:element name="string" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mapReference">
+    <xs:sequence>
+      <xs:element name="block" type="xs:string" minOccurs="0"/>
+      <xs:element name="lot" type="xs:string" minOccurs="0"/>
+      <xs:element name="map" type="xs:string" minOccurs="0"/>
+      <xs:element name="range" type="xs:string" minOccurs="0"/>
+      <xs:element name="section" type="xs:string" minOccurs="0"/>
+      <xs:element name="subdivision" type="xs:string" minOccurs="0"/>
+      <xs:element name="township" type="xs:string" minOccurs="0"/>
+      <xs:element name="tract" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pin">
+    <xs:sequence>
+      <xs:element name="referenceAddress" type="xs:string" minOccurs="0"/>
+      <xs:element name="referenceEntity" type="xs:string" minOccurs="0"/>
+      <xs:element name="referenceLandType" type="xs:string" minOccurs="0"/>
+      <xs:element name="source" type="xs:string" minOccurs="0"/>
+      <xs:element name="string" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="spatialObjects">
+    <xs:sequence>
+      <xs:element name="spatialObjects" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capStatus">
+    <xs:sequence>
+      <xs:element name="applied" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="capStatusGroup" type="capStatusGroup" minOccurs="0"/>
+      <xs:element name="date" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="time" type="xs:string" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capStatusGroup">
+    <xs:complexContent>
+      <xs:extension base="identifier">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="type">
+    <xs:sequence>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workOrderTasks">
+    <xs:sequence>
+      <xs:element name="workOrderTasks" type="workOrderTask" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workOrderTask">
+    <xs:sequence>
+      <xs:element name="action" type="xs:string" minOccurs="0"/>
+      <xs:element name="actual" type="xs:string" minOccurs="0"/>
+      <xs:element name="comments" type="xs:string" minOccurs="0"/>
+      <xs:element name="complete" type="xs:string" minOccurs="0"/>
+      <xs:element name="completedBy" type="xs:string" minOccurs="0"/>
+      <xs:element name="completedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="durationUnit" type="xs:string" minOccurs="0"/>
+      <xs:element name="estimate" type="xs:string" minOccurs="0"/>
+      <xs:element name="order" type="xs:string" minOccurs="0"/>
+      <xs:element name="processCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="processID" type="xs:string" minOccurs="0"/>
+      <xs:element name="stepNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="taskCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="taskDescription" type="xs:string" minOccurs="0"/>
+      <xs:element name="taskSOP" type="xs:string" minOccurs="0"/>
+      <xs:element name="totalCost" type="xs:double" minOccurs="0"/>
+      <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+      <xs:element name="updatedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="workflowTaskStatusCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capConditions">
+    <xs:sequence>
+      <xs:element name="capCondition" type="mapItem" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mapItem">
+    <xs:sequence>
+      <xs:element name="amount" type="xs:int"/>
+      <xs:element name="doubleNumber" type="xs:double"/>
+      <xs:element name="key" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capContact">
+    <xs:sequence>
+      <xs:element name="address" type="xs:string" minOccurs="0"/>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="facsimileNumbers" type="facsimileNumbers" minOccurs="0"/>
+      <xs:element name="fullName" type="xs:string" minOccurs="0"/>
+      <xs:element name="key" type="xs:string" minOccurs="0"/>
+      <xs:element name="phoneNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="telephoneNumbers" type="telephoneNumbers" minOccurs="0"/>
+      <xs:element name="type" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capContacts">
+    <xs:sequence>
+      <xs:element name="capContact" type="capContact" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capFees">
+    <xs:sequence>
+      <xs:element name="capFee" type="mapItem" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="lastDueTime" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastPayment" type="xs:double" minOccurs="0"/>
+      <xs:element name="lastPaymentTime" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capInspections">
+    <xs:sequence>
+      <xs:element name="capInspection" type="mapItem" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="nextInspSchedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="nextInspection" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capProjectInformation">
+    <xs:sequence>
+      <xs:element name="capId" type="xs:string" minOccurs="0"/>
+      <xs:element name="capType" type="xs:string" minOccurs="0"/>
+      <xs:element name="shotComment" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capProjectInformations">
+    <xs:sequence>
+      <xs:element name="capProjectInformation" type="capProjectInformation" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capRelation">
+    <xs:sequence>
+      <xs:element name="action" type="xs:string" minOccurs="0"/>
+      <xs:element name="additionalInformation" type="additionalInformation" minOccurs="0"/>
+      <xs:element name="CAPId" type="capId" minOccurs="0"/>
+      <xs:element name="contextType" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capRelationGroup">
+    <xs:sequence>
+      <xs:element name="associateCAPs" type="associateCAPs" minOccurs="0"/>
+      <xs:element name="contextType" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="parentCAP" type="parentCAP" minOccurs="0"/>
+      <xs:element name="subsidiaryCAPs" type="subsidiaryCAPs" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parentCAP">
+    <xs:sequence>
+      <xs:element name="CAP" type="cap" minOccurs="0"/>
+      <xs:element name="CAPId" type="capId" minOccurs="0"/>
+      <xs:element name="contextType" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subsidiaryCAPs">
+    <xs:sequence>
+      <xs:element name="CAPIds" type="capIds" minOccurs="0"/>
+      <xs:element name="CAPs" type="caPs" minOccurs="0"/>
+      <xs:element name="contextType" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capStatuses">
+    <xs:sequence>
+      <xs:element name="CAPStatuses" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capStatusGroupId">
+    <xs:complexContent>
+      <xs:extension base="identifier">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="capType">
+    <xs:sequence>
+      <xs:element name="additionalInformationGroupIds" type="additionalInformationGroupIds" minOccurs="0"/>
+      <xs:element name="applicationTypeSecurity" type="xs:string" minOccurs="0"/>
+      <xs:element name="capStatusGroupId" type="capStatusGroupId" minOccurs="0"/>
+      <xs:element name="category" type="xs:string" minOccurs="0"/>
+      <xs:element name="defaultCapStatus" type="disposition" minOccurs="0"/>
+      <xs:element name="dispositions" type="dispositions" minOccurs="0"/>
+      <xs:element name="documentGroupIds" type="documentGroupIds" minOccurs="0"/>
+      <xs:element name="editLayerId" type="gisLayerId" minOccurs="0"/>
+      <xs:element name="entities" type="entities" minOccurs="0"/>
+      <xs:element name="gisService" type="xs:string" minOccurs="0"/>
+      <xs:element name="group" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="inspectionTypeSetIds" type="inspectionTypeSetIds" minOccurs="0"/>
+      <xs:element name="inspectionTypes" type="inspectionTypes" minOccurs="0"/>
+      <xs:element name="ivrNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="module" type="xs:string" minOccurs="0"/>
+      <xs:element name="roles" type="roles" minOccurs="0"/>
+      <xs:element name="smartChoiceCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="standardCommentsGroupIds" type="standardCommentsGroupIds" minOccurs="0"/>
+      <xs:element name="subGroup" type="xs:string" minOccurs="0"/>
+      <xs:element name="type" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="disposition">
+    <xs:sequence>
+      <xs:element name="applied" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="entities" type="entities" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="inspectionResultInfo" type="inspectionResultInfo" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="resolutionType" type="xs:string" minOccurs="0"/>
+      <xs:element name="security" type="xs:string" minOccurs="0"/>
+      <xs:element name="statusGroup" type="statusGroup" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="inspectionResultInfo">
+    <xs:sequence>
+      <xs:element name="lowerMajorViolation" type="xs:string" minOccurs="0"/>
+      <xs:element name="lowerScore" type="xs:string" minOccurs="0"/>
+      <xs:element name="upperMajorViolation" type="xs:string" minOccurs="0"/>
+      <xs:element name="upperScore" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="statusGroup">
+    <xs:complexContent>
+      <xs:extension base="identifier">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="documentGroupIds">
+    <xs:sequence>
+      <xs:element name="documentGroupIds" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="gisLayerId">
+    <xs:sequence>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="inspectionTypeSetIds">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="inspectionTypes">
+    <xs:sequence>
+      <xs:element name="inspectionTypes" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="standardCommentsGroupIds">
+    <xs:sequence>
+      <xs:element name="standardCommentsGroupIds" type="standardCommentsGroupId" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="standardCommentsGroupId">
+    <xs:complexContent>
+      <xs:extension base="identifier">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="capTypeId">
+    <xs:sequence>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capTypeIds">
+    <xs:sequence>
+      <xs:element name="CAPTypeIds" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capTypes">
+    <xs:sequence>
+      <xs:element name="CAPTypes" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capWorkflows">
+    <xs:sequence>
+      <xs:element name="currentSpendDays" type="xs:int"/>
+      <xs:element name="currentTask" type="xs:string" minOccurs="0"/>
+      <xs:element name="dispCurrentTask" type="xs:string" minOccurs="0"/>
+      <xs:element name="dispLastComplete" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastComplete" type="xs:string" minOccurs="0"/>
+      <xs:element name="totalSpendDays" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="costFactor">
+    <xs:complexContent>
+      <xs:extension base="identifier">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="costFactors">
+    <xs:sequence>
+      <xs:element name="costFactors" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="costItem">
+    <xs:sequence>
+      <xs:element name="action" type="xs:string" minOccurs="0"/>
+      <xs:element name="costAccount" type="xs:string" minOccurs="0"/>
+      <xs:element name="costAccountIdentifier" type="identifier" minOccurs="0"/>
+      <xs:element name="costDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="costFactor" type="xs:double" minOccurs="0"/>
+      <xs:element name="costFix" type="xs:double" minOccurs="0"/>
+      <xs:element name="costFormula" type="xs:string" minOccurs="0"/>
+      <xs:element name="costItem" type="xs:string" minOccurs="0"/>
+      <xs:element name="costItemId" type="identifier" minOccurs="0"/>
+      <xs:element name="costSubGroup" type="xs:string" minOccurs="0"/>
+      <xs:element name="costType" type="xs:string" minOccurs="0"/>
+      <xs:element name="costUnitCost" type="xs:double" minOccurs="0"/>
+      <xs:element name="costUnitOfMeasure" type="xs:string" minOccurs="0"/>
+      <xs:element name="costUnitOfMeasureIdentifier" type="identifier" minOccurs="0"/>
+      <xs:element name="endTime" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="quantity" type="xs:double" minOccurs="0"/>
+      <xs:element name="security" type="xs:string" minOccurs="0"/>
+      <xs:element name="startTime" type="xs:string" minOccurs="0"/>
+      <xs:element name="totalCost" type="xs:double" minOccurs="0"/>
+      <xs:element name="type" type="type" minOccurs="0"/>
+      <xs:element name="workOrderTask" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="costItemType">
+    <xs:sequence>
+      <xs:element name="costAccount" type="xs:string" minOccurs="0"/>
+      <xs:element name="costAccountIdentifier" type="identifier" minOccurs="0"/>
+      <xs:element name="costFactor" type="xs:double" minOccurs="0"/>
+      <xs:element name="costFix" type="xs:double" minOccurs="0"/>
+      <xs:element name="costFormula" type="xs:string" minOccurs="0"/>
+      <xs:element name="costSubGroup" type="xs:string" minOccurs="0"/>
+      <xs:element name="costUnitCost" type="xs:double" minOccurs="0"/>
+      <xs:element name="costUnitOfMeasure" type="xs:string" minOccurs="0"/>
+      <xs:element name="costUnitOfMeasureIdentifier" type="identifier" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="costItemTypes">
+    <xs:sequence>
+      <xs:element name="costItemTypes" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="costType">
+    <xs:sequence>
+      <xs:element name="costItemTypes" type="costItemTypes" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="costTypes">
+    <xs:sequence>
+      <xs:element name="costTypes" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="departments">
+    <xs:sequence>
+      <xs:element name="department" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="detail">
+    <xs:sequence>
+      <xs:element name="addresses" type="addresses" minOccurs="0"/>
+      <xs:element name="capConditions" type="capConditions" minOccurs="0"/>
+      <xs:element name="capContacts" type="capContacts" minOccurs="0"/>
+      <xs:element name="capFees" type="capFees" minOccurs="0"/>
+      <xs:element name="capInspections" type="capInspections" minOccurs="0"/>
+      <xs:element name="capProjectInfo" type="capProjectInformations" minOccurs="0"/>
+      <xs:element name="capWorkflows" type="capWorkflows" minOccurs="0"/>
+      <xs:element name="identifyDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="type" type="type" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parentCAPId">
+    <xs:sequence>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parentCAPIds">
+    <xs:sequence>
+      <xs:element name="CAPId" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="part">
+    <xs:sequence>
+      <xs:element name="action" type="xs:string" minOccurs="0"/>
+      <xs:element name="altID" type="xs:string" minOccurs="0"/>
+      <xs:element name="bin" type="xs:string" minOccurs="0"/>
+      <xs:element name="comments" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="partBrand" type="xs:string" minOccurs="0"/>
+      <xs:element name="partBrandIdentifier" type="identifier" minOccurs="0"/>
+      <xs:element name="partDescription" type="xs:string" minOccurs="0"/>
+      <xs:element name="partDescriptionIdentifier" type="identifier" minOccurs="0"/>
+      <xs:element name="partId" type="identifier" minOccurs="0"/>
+      <xs:element name="partNbr" type="xs:string" minOccurs="0"/>
+      <xs:element name="partType" type="partType" minOccurs="0"/>
+      <xs:element name="quantity" type="xs:double" minOccurs="0"/>
+      <xs:element name="status" type="status" minOccurs="0"/>
+      <xs:element name="supplies" type="supplies" minOccurs="0"/>
+      <xs:element name="taxable" type="xs:string" minOccurs="0"/>
+      <xs:element name="transactionDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="unitCost" type="xs:double" minOccurs="0"/>
+      <xs:element name="unitOfMeasurement" type="xs:string" minOccurs="0"/>
+      <xs:element name="unitOfMeasurementIdentifier" type="identifier" minOccurs="0"/>
+      <xs:element name="workOrderTask" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="partType">
+    <xs:sequence>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="status">
+    <xs:sequence>
+      <xs:element name="applied" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="date" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="time" type="xs:string" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="supplies">
+    <xs:sequence>
+      <xs:element name="supplies" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="partIds">
+    <xs:sequence>
+      <xs:element name="partIds" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="partInventories">
+    <xs:sequence>
+      <xs:element name="partInventories" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="partInventory">
+    <xs:sequence>
+      <xs:element name="comments" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="partBrand" type="xs:string" minOccurs="0"/>
+      <xs:element name="partBrandIdentifier" type="identifier" minOccurs="0"/>
+      <xs:element name="partDescription" type="xs:string" minOccurs="0"/>
+      <xs:element name="partDescriptionIdentifier" type="identifier" minOccurs="0"/>
+      <xs:element name="partNbr" type="xs:string" minOccurs="0"/>
+      <xs:element name="partType" type="partType" minOccurs="0"/>
+      <xs:element name="status" type="status" minOccurs="0"/>
+      <xs:element name="supplies" type="supplies" minOccurs="0"/>
+      <xs:element name="taxable" type="xs:string" minOccurs="0"/>
+      <xs:element name="totalSupply" type="xs:double" minOccurs="0"/>
+      <xs:element name="unitCost" type="xs:double" minOccurs="0"/>
+      <xs:element name="unitOfMeasurement" type="xs:string" minOccurs="0"/>
+      <xs:element name="unitOfMeasurementIdentifier" type="identifier" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="partTypes">
+    <xs:sequence>
+      <xs:element name="partTypes" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="refWorkOrderTask">
+    <xs:sequence>
+      <xs:element name="capTypes" type="capTypes" minOccurs="0"/>
+      <xs:element name="defaultEstimate" type="xs:double" minOccurs="0"/>
+      <xs:element name="defaultTaskSOP" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="durationUnit" type="xs:string" minOccurs="0"/>
+      <xs:element name="effectiveDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="expireDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="workOrderTaskCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="refWorkOrderTasks">
+    <xs:sequence>
+      <xs:element name="refWorkOrderTasks" type="refWorkOrderTask" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="regionCAP">
+    <xs:sequence>
+      <xs:element name="addresses" type="xs:string" minOccurs="0"/>
+      <xs:element name="capType" type="xs:string" minOccurs="0"/>
+      <xs:element name="latitude" type="xs:double"/>
+      <xs:element name="longitude" type="xs:double"/>
+      <xs:element name="members" type="xs:int"/>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="regionCAPs">
+    <xs:sequence>
+      <xs:element name="regionCAP" type="regionCAP" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="staffs">
+    <xs:sequence>
+      <xs:element name="staff" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="statuses">
+    <xs:sequence>
+      <xs:element name="statuses" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="supply">
+    <xs:sequence>
+      <xs:element name="identifierDisplay" type="xs:string" minOccurs="0"/>
+      <xs:element name="keys" type="keys" minOccurs="0"/>
+      <xs:element name="locationName" type="xs:string" minOccurs="0"/>
+      <xs:element name="locationSeq" type="xs:long" minOccurs="0"/>
+      <xs:element name="partSeq" type="xs:long" minOccurs="0"/>
+      <xs:element name="quantityOnHand" type="xs:double" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workOrderTemplate">
+    <xs:sequence>
+      <xs:element name="capType" type="capType" minOccurs="0"/>
+      <xs:element name="comments" type="xs:string" minOccurs="0"/>
+      <xs:element name="costItems" type="costItems" minOccurs="0"/>
+      <xs:element name="department" type="department" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="parts" type="parts" minOccurs="0"/>
+      <xs:element name="primary" type="xs:string" minOccurs="0"/>
+      <xs:element name="WOTTasks" type="wotTasks" minOccurs="0"/>
+      <xs:element name="workOrderPriority" type="xs:string" minOccurs="0"/>
+      <xs:element name="workOrderTemplateName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="wotTasks">
+    <xs:sequence>
+      <xs:element name="WOTTasks" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workOrderTemplates">
+    <xs:sequence>
+      <xs:element name="workOrderTemplates" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="wotTask">
+    <xs:sequence>
+      <xs:element name="comments" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="durationUnit" type="xs:string" minOccurs="0"/>
+      <xs:element name="estimate" type="xs:string" minOccurs="0"/>
+      <xs:element name="order" type="xs:string" minOccurs="0"/>
+      <xs:element name="processCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="processID" type="xs:string" minOccurs="0"/>
+      <xs:element name="stepNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="taskCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="taskDescription" type="xs:string" minOccurs="0"/>
+      <xs:element name="taskSOP" type="xs:string" minOccurs="0"/>
+      <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+      <xs:element name="updatedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="workflowTaskStatusCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

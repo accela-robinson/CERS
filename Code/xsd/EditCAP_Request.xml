@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GovXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML">
+  <UpdateCAP>
+    <System>
+      <XMLVersion>720</XMLVersion>
+      <ServiceProviderCode>ADBC</ServiceProviderCode>
+      <Username>ADMIN</Username>
+      <MaxRows>50</MaxRows>
+      <StartRow>1</StartRow>
+      <EndRow>0</EndRow>
+      <TotalRows>0</TotalRows>
+      <ApplicationState>68169548519986884772</ApplicationState>
+      <Context>AccelaMobileOffice</Context>
+      <LanguageID>en-US</LanguageID>
+    </System>
+    <contextType>Update</contextType>
+    <CAPId>
+      <Keys>
+        <Key>12CAP</Key>
+        <Key>00000</Key>
+        <Key>001QW</Key>
+      </Keys>
+    </CAPId>
+    <Addresses>
+      <DetailAddress action="Update" isPrimary="true">
+        <Keys>
+          <Key>1000186559</Key>
+        </Keys>
+        <houseNumber>1212122</houseNumber>
+        <houseNumberFraction>1/2</houseNumberFraction>
+        <streetDirection>E3</streetDirection>
+        <streetName>12122</streetName>
+        <streetSuffix>Ave</streetSuffix>
+        <streetSuffixDirection>E3</streetSuffixDirection>
+        <unit>12122</unit>
+        <unitType>Apt.</unitType>
+        <City>12122</City>
+        <County>121212</County>
+        <State>2</State>
+        <PostalCode>12122</PostalCode>
+        <addressTypeFlag>I</addressTypeFlag>
+        <streetPrefix>12122</streetPrefix>
+        <houseNumberEnd>121212</houseNumberEnd>
+        <countryCode>AU</countryCode>
+        <unitEnd>1212</unitEnd>
+        <AuditStatus>A</AuditStatus>
+        <sourceNumber />
+        <houseFractionEnd>1/4</houseFractionEnd>
+        <description>1212</description>
+        <distance>1212.0</distance>
+        <secondaryRoad>1212</secondaryRoad>
+        <secondaryRoadNumber>1212</secondaryRoadNumber>
+        <inspectionDistrictPrefix>12</inspectionDistrictPrefix>
+        <inspectionDistrict>1212</inspectionDistrict>
+        <neighborhoodPrefix>1212</neighborhoodPrefix>
+        <neighborhood>12</neighborhood>
+        <XCoordinate>12.0</XCoordinate>
+        <YCoordinate>12.0</YCoordinate>
+        <AuditID>ADMIN</AuditID>
+        <AuditDate>2012-11-28</AuditDate>
+        <sourceFlag>12</sourceFlag>
+        <fullAddress>12</fullAddress>
+        <line1 />
+        <line2 />
+        <houseNumberAlphaStart>12</houseNumberAlphaStart>
+        <houseNumberAlphaEnd>12</houseNumberAlphaEnd>
+        <levelPrefix>12</levelPrefix>
+        <levelNumberStart>12</levelNumberStart>
+        <levelNumberEnd>21</levelNumberEnd>
+        <ReferenceAddressType />
+      </DetailAddress>
+    </Addresses>
+    <Contacts>
+      <Contact isPrimary="false" action="Update">
+        <Keys>
+          <Key>60712883</Key>
+          <Key>contact</Key>
+        </Keys>
+        <PersonAndOrganization >
+          <thePerson>
+            <Person>
+              <familyName>12312</familyName>
+              <givenName>1231232</givenName>
+              <middleNames>
+                <String>1231232</String>
+              </middleNames>
+              <roles>
+                <ActorRole>
+                  <role>userdefined</role>
+                  <userDefinedRole>Apiary Registrant</userDefinedRole>
+                </ActorRole>
+              </roles>
+              <addresses>
+                <PostalAddress>
+                  <addressLines>
+                    <String>123</String>
+                    <String>1231</String>
+                    <String>23123</String>
+                  </addressLines>
+                  <postalCode>23</postalCode>
+                  <town>Ajman</town>
+                  <region>1231</region>
+                </PostalAddress>
+                <TelecomAddress>
+                  <telephoneNumbers>
+                    <String>123</String>
+                    <String>123</String>
+                  </telephoneNumbers>
+                  <facsimileNumbers>
+                    <String>123</String>
+                  </facsimileNumbers>
+                  <electronicMailAddresses>
+                    <String>123</String>
+                  </electronicMailAddresses>
+                </TelecomAddress>
+              </addresses>
+              <fullName>231232</fullName>
+            </Person>
+          </thePerson>
+          <theOrganization>
+            <Organization>
+              <name>123</name>
+              <contactBusinessName>123</contactBusinessName>
+            </Organization>
+          </theOrganization>
+        </PersonAndOrganization>
+        <Licenses  />
+      </Contact>
+      <Contact isPrimary="false" action="Update">
+        <Keys>
+          <Key>123</Key>
+          <Key>license</Key>
+        </Keys>
+        <PersonAndOrganization >
+          <thePerson>
+            <Person>
+              <familyName>1232</familyName>
+              <givenName>12322</givenName>
+              <middleNames>
+                <String>1232</String>
+              </middleNames>
+              <roles />
+              <addresses>
+                <PostalAddress>
+                  <addressLines>
+                    <String>12312</String>
+                    <String>123</String>
+                    <String>123</String>
+                  </addressLines>
+                  <postalCode>123</postalCode>
+                  <town>Al Fujairah</town>
+                  <region>123</region>
+                </PostalAddress>
+                <TelecomAddress>
+                  <telephoneNumbers>
+                    <String>123</String>
+                    <String>123</String>
+                  </telephoneNumbers>
+                  <facsimileNumbers>
+                    <String>123</String>
+                  </facsimileNumbers>
+                  <electronicMailAddresses>
+                    <String>123</String>
+                  </electronicMailAddresses>
+                </TelecomAddress>
+              </addresses>
+              <fullName />
+            </Person>
+          </thePerson>
+          <theOrganization>
+            <Organization>
+              <name>123</name>
+              <contactBusinessName>123</contactBusinessName>
+            </Organization>
+          </theOrganization>
+        </PersonAndOrganization>
+        <Licenses >
+          <License action="Update">
+            <licenseType>AWM FLCB</licenseType>
+            <LicenseTypeId>
+              <Keys>
+                <Key>AWM FLCB</Key>
+              </Keys>
+              <IdentifierDisplay>AWM FLCB</IdentifierDisplay>
+            </LicenseTypeId>
+            <licenseNumber>123</licenseNumber>
+            <issuedDate>2012-11-19</issuedDate>
+            <expirationDate>2012-11-30</expirationDate>
+          </License>
+        </Licenses>
+      </Contact>
+    </Contacts>
+    <ParcelIds>
+      <ParcelId action="Update">
+        <Keys>
+          <Key>123123123</Key>
+        </Keys>
+        <IdentifierDisplay>123123123</IdentifierDisplay>
+        <Value>123123123</Value>
+      </ParcelId>
+      <ParcelId action="Add">
+        <Value>12212</Value>
+      </ParcelId>
+    </ParcelIds>
+    <Status>
+      <Value />
+      <Date>2012-11-28</Date>
+      <Keys>
+        <Key />
+      </Keys>
+    </Status>
+  </UpdateCAP>
+</GovXML>

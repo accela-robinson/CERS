@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GovXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.accela.com/schema/AccelaOpenSystemInterfaceXML">
+  <GetInspections>
+    <System>
+      <XMLVersion>720</XMLVersion>
+      <ServiceProviderCode>ADBC</ServiceProviderCode>
+      <Username>ADMIN</Username>
+      <MaxRows>50</MaxRows>
+      <StartRow>1</StartRow>
+      <EndRow>0</EndRow>
+      <TotalRows>0</TotalRows>
+      <ApplicationState>89988797742289956517</ApplicationState>
+      <Context>AccelaMobileOffice</Context>
+      <LanguageID>en-US</LanguageID>
+    </System>
+    <Contacts />
+    <InspectionTypes>
+      <InspectionType>
+        <Keys>
+          <Key>SECOND</Key>
+          <Key>SECOND-18</Key>
+          <Key>84003208</Key>
+        </Keys>
+        <autoAssign>false</autoAssign>
+      </InspectionType>
+    </InspectionTypes>
+    <scheduledDateRanges>
+      <DateRange>
+        <from>2012-11-21</from>
+        <to>2012-12-05</to>
+      </DateRange>
+    </scheduledDateRanges>   
+   <InspectionStatus>
+     <Keys>
+          <Key>Pending</Key>
+        </Keys>
+   </InspectionStatus>
+    <returnElements>
+      <returnElement>TimeAccountings</returnElement>
+      <returnElement>Departments</returnElement>
+      <returnElement>DisableAuditLog</returnElement>
+      <returnElement>Districts</returnElement>
+      <returnElement>CAPIDs</returnElement>
+    </returnElements>
+    <CAPTypeIds>
+      <CAPTypeId>
+        <Keys>
+          <Key>Licenses</Key>
+          <Key>A</Key>
+          <Key>B</Key>
+          <Key>C</Key>
+        </Keys>
+      </CAPTypeId>
+    </CAPTypeIds>
+  </GetInspections>
+</GovXML>

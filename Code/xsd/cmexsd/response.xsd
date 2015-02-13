@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="http://cersservices.calepa.ca.gov/Schemas/RegulatorCMESubmit/1/04/" xmlns:mstns="http://cersservices.calepa.ca.gov/Schemas/RegulatorCMESubmit/1/04/" xmlns="http://cersservices.calepa.ca.gov/Schemas/RegulatorCMESubmit/1/04/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="CMESubmittalResponse" msdata:Prefix="cers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="EntityKeys" form="unqualified" type="xs:string" minOccurs="0" />
+        <xs:element name="Transaction" form="unqualified">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransactionKey" form="unqualified" type="xs:string" minOccurs="0" />
+              <xs:element name="RegulatorTransactionKey" form="unqualified" type="xs:string" minOccurs="0" />
+              <xs:element name="TransactionReceived" form="unqualified" type="xs:string" minOccurs="0" />
+              <xs:element name="TransactionStatus" form="unqualified" type="xs:string" minOccurs="0" />
+              <xs:element name="DetailUri" form="unqualified" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Summary" form="unqualified">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DataProcessedOn" form="unqualified" type="xs:string" minOccurs="0" />
+              <xs:element name="ErrorSummary" form="unqualified" type="xs:string" minOccurs="0" />
+              <xs:element name="RequiredSummary" form="unqualified" type="xs:string" minOccurs="0" />
+              <xs:element name="WarningSummary" form="unqualified" type="xs:string" minOccurs="0" />
+              <xs:element name="AdvisorySummary" form="unqualified" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GuidanceMessages" form="unqualified">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GuidanceMessage" form="unqualified" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent msdata:ColumnName="GuidanceMessage_Text" msdata:Ordinal="4">
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="guidanceCode" form="unqualified" type="xs:string" />
+                      <xs:attribute name="level" form="unqualified" type="xs:string" />
+                      <xs:attribute name="entityResource" form="unqualified" type="xs:string" />
+                      <xs:attribute name="regulatorKey" form="unqualified" type="xs:string" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:Prefix="cers">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="CMESubmittalResponse" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
