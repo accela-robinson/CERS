@@ -337,7 +337,7 @@ public class CapService
 		// 2) update parent facility cap with detail, contact, address
 		UpdateCAP updateCAP = ConvertHelper.updateCAPModel(csc.addtion.get(csc.types[0]), facilitySubmittalType,
 			strDataSetDateTime,capId, countrys, capBasic);
-		
+		updateCAP.setcAPDetail(null);
 		LOGGER.info("start update record : " + capId);
 		capId.setIdentifierDisplay(capBasic.getIdentifierDisplay());
 		//3)	Create child caps (new) then 4)	Update parent facility cap with detail.
