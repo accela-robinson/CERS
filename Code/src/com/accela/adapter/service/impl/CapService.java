@@ -499,7 +499,7 @@ public class CapService
 				strDataSetDateTime,capIds ,countrys);
 			//Clean the CAP detail in order to the event ApplicationDetailUpdateBefore is not triggered.
 			updateCAP.setcAPDetail(null); 
-
+			updateCAP.setContacts(null);
 			try
 			{
 				//Set status between InitializeCAP and UpateCAP when new facility parent record created.
